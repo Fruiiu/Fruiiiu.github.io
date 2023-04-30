@@ -29,7 +29,7 @@ function switchChar(a) {
     //console.log("switch char" + i);
     setChar(getCharPath(i));
     setBG(getBGPath(i));
-    
+
 
 }
 
@@ -40,7 +40,7 @@ function setChar(str) {
     img.alt = str;
 }
 
-function setBG( str) {
+function setBG(str) {
     var img = document.getElementById('bg');
     img.src = str;
     img.alt = str;
@@ -60,7 +60,7 @@ function getBGPath(i) {
     }
     else {
         //console.log("normalBg:" + i);
-        return "background/SimpleBG.png";
+        return "background/SimpleBg.png";
     }
 }
 
@@ -119,4 +119,10 @@ function styleAllMasks(a) {
 //helper
 function toURL(s) {
     return "url(" + s + ")";
+}
+
+//calculate estimate price (range?)
+function calcPrice(a1, a2, a3) {
+    //a1 is finishedness, a2 is size of char, a3 is amount of extra elements added
+    //TODO after both are added
 }

@@ -6,49 +6,48 @@
 
 /* -------------------- GENERAL --------------------*/
 
-body
-{
-    background-color:#1b4553;
+body {
+    background-color: #1b4553;
 }
 
 p, h1, h2, h3, h4, h5, h6 {
-    color:white;
+    color: white;
 }
 
-a{
-    color:#A9F4FF;
+a {
+    color: #A9F4FF;
 }
 
-a:visited{
-    color:#7CA9FF;
+    a:visited {
+        color: #7CA9FF;
+    }
+
+.flex {
+    display: flex;
+    flex-direction: row;
 }
 
-.flex{
-    display:flex;
-    flex-direction:row;
-}
-
-.top{
-    z-index:3;
+.top {
+    z-index: 3;
 }
 
 /*--------------------IMAGE STACK--------------------*/
-.stackcontainer{
-    width:445px;
-    height:850px;
-    position:relative;
-    overflow:visible;
+.stackcontainer {
+    width: 445px;
+    height: 850px;
+    position: relative;
+    overflow: visible;
 }
 
 .stack {
-    position:absolute;
-    top:0;
-    left:-50px;
-    overflow:visible;
+    position: absolute;
+    top: 0;
+    left: -50px;
+    overflow: visible;
 }
 
-div.stack > img{
-    height:850px;
+div.stack > img {
+    height: 850px;
 }
 
 .multiply {
@@ -59,6 +58,8 @@ div.stack > img{
     mask-composite: add;
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
+    -webkit-mask-size: inherit;
+    mask-size: inherit;
 }
 
 
@@ -68,7 +69,7 @@ input[type=range][orient=vertical] {
     width: 8px;
     height: 175px;
     padding: 0 5px;
-    filter:brightness(0.8);
+    filter: brightness(0.8);
     background: black;
     outline: none;
     opacity: 0.7;
@@ -77,22 +78,22 @@ input[type=range][orient=vertical] {
 }
 
 
-input[type=range][orient=vertical]:hover {
-    filter: brightness(1);
-}
+    input[type=range][orient=vertical]:hover {
+        filter: brightness(1);
+    }
 
-input[type=range][orient=vertical]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 25px;
-    height: 25px;
-    background: red;
-    cursor: pointer;
-}
+    input[type=range][orient=vertical]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 25px;
+        height: 25px;
+        background: red;
+        cursor: pointer;
+    }
 
-input[type=range][orient=vertical]::-moz-range-thumb {
-    width: 25px;
-    height: 25px;
-    background: red;
-    cursor: pointer;
-}
+    input[type=range][orient=vertical]::-moz-range-thumb {
+        width: 25px;
+        height: 25px;
+        background: red;
+        cursor: pointer;
+    }
