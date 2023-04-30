@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>commisions info</title>
+
+    <link rel="stylesheet" href="CommStyleSheet.css" />
+    <script src="comm_java_script.js" ></script>
+</head>
+
+<body>
+    <div class="flex">
+
+        <!--commision changer-->
+        <div class="stackcontainer">
+            <!--bakground-->
+            <div class="stack">
+                <img id="bg" src="background\SimpleBg.png" alt="simple background" />
+            </div>
+
+            <!--caracters -->
+            <div class="stack">
+                <img id="char" src="character\Sketch.png" alt="character sketch" />
+            </div>
+
+            <!-- char length -->
+            <div class="stack">
+                <img id="size-mask" 
+                     class="multiply"
+                     src="size_mask\MaskBust.png"
+                     alt="bust mask" />
+            </div>
+
+        </div>
+
+        <div class="top">
+            <input type="range"
+                   orient="vertical"
+                   min="0"
+                   max="4"
+                   id="range1" />
+
+            <script>
+                var slider = document.getElementById("range1");
+
+                slider.oninput = function () {
+                    //console.log(slider.value);
+                    switchChar(slider.value);
+                }
+            </script>
+        </div>
+    </div>
+
+</body>
+</html>
