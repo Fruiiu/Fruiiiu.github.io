@@ -27,6 +27,11 @@ a {
     flex-direction: row;
 }
 
+.vflex {
+    display: flex;
+    flex-direction: column;
+}
+
 .top {
     z-index: 3;
 }
@@ -58,23 +63,29 @@ div.stack > img {
     mask-composite: add;
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
-    -webkit-mask-size: inherit;
-    mask-size: inherit;
+    -webkit-mask-size: cover;
+    mask-size: cover;
 }
 
 
 /*--------------------INPUTS--------------------*/ /*TODO style better*/
+.slidercontainer{
+
+}
+
 input[type=range][orient=vertical] {
     -webkit-appearance: slider-vertical; /* Chromium, but everything uses this now*/
     width: 8px;
     height: 175px;
     padding: 0 5px;
-    filter: brightness(0.8);
+
+
     background: black;
     outline: none;
-    opacity: 0.7;
+
     -webkit-transition: .2s;
     transition: filter .2s;
+    filter: brightness(0.8);
 }
 
 
@@ -97,3 +108,13 @@ input[type=range][orient=vertical] {
         background: red;
         cursor: pointer;
     }
+
+.rangeLablecontainer{
+}
+
+.rangeLablecontainer > p{
+    margin-top:3px;
+    margin-bottom: 17px;
+    margin-left:10px;
+    margin-right:10px;
+}
