@@ -10,13 +10,22 @@
 </head>
 
 <body>
+    <!--header (menu and home here)-->
     <div>
         <p>Go <a href="index.html"> back </a></p>
         <p> <a href="background/SimpleBg.png"> newlink</a></p>
     </div>
+
+    <!--terms of service and etc-->
+    <div class="tos">
+        <h1>Terms of Service</h1>
+        <p> imaging theres a lot of words here</p>
+
+    </div>
+    <!--commision interactible-->
     <div class="flex">
 
-        <!--commision changer-->
+        <!--commision display-->
         <div class="stackcontainer">
             <!--bakground-->
             <div class="stack">
@@ -37,26 +46,30 @@
                      alt="bust mask" />
             </div>
         </div>
-        <div class="top vflex">
+        
+        <!--commision settings-->
+        <div class="top vflex" style="min-width:176px;">
             <!--completeness slider-->
-            <h2>Finish</h2>
-            <div class="top flex" style="height:180px">
-                <input type="range"
-                       orient="vertical"
-                       min="0"
-                       max="4"
-                       id="range1" />
-                <div class="vflex rangeLablecontainer">
-                    <p>With Background</p>
-                    <p>Shaded</p>
-                    <p>Colored</p>
-                    <p>Lineart</p>
-                    <p>Sketch</p>
+            <div class="shaded">
+                <h2>Finish</h2>
+                <div class="flex" style="height:180px">
+                    <input type="range"
+                           orient="vertical"
+                           min="0"
+                           max="4"
+                           id="range1" />
+                    <div class="vflex rangeLablecontainer">
+                        <p>With Background</p>
+                        <p>Shaded</p>
+                        <p>Colored</p>
+                        <p>Lineart</p>
+                        <p>Sketch</p>
+                    </div>
                 </div>
             </div>
 
             <!--size chooser-->
-            <div>
+            <div class="shaded">
                 <h2>Size</h2>
                 <form>
                     <div>
@@ -80,10 +93,20 @@
 
                 </form>
             </div>
+
+            <!--additional elements chooser-->
+
+        
+        </div>
+
+        <!--commision explanation and examples-->
+        <div class="vflex">
+            <p> description of what to explect here</p>
         </div>
         
     </div>
 
+    <!--footer-->
 
     <!-- SCRIPT LOAD -->
     <script src="comm_java_script.js"></script>

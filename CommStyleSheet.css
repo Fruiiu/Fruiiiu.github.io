@@ -11,6 +11,7 @@ body {
 }
 
 p, h1, h2, h3, h4, h5, h6,label {
+    margin:7px;
     color: white;
 }
 
@@ -36,23 +37,41 @@ a {
     z-index: 3;
 }
 
+.shaded {
+    background-color: rgba( 28, 27, 40, 0.7);
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 15px;
+}
+
+.tos{
+}
+
+.tos > *{
+    
+    text-align:center;
+}
+
 /*--------------------IMAGE STACK--------------------*/
 .stackcontainer {
-    width: 460px;
-    height: 850px;
+    width: 420px;
+    height: 750px;
     position: relative;
     overflow: visible;
 }
 
 .stack {
     position: absolute;
-    top: -20px;
-    left: -50px;
+    top: -40px;
+    left: -30px;
     overflow: visible;
 }
 
 div.stack > img {
-    height: 850px;
+    height: 750px;
 }
 
 .multiply {
