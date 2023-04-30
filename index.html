@@ -1,11 +1,10 @@
-﻿﻿
+﻿
 <!DOCTYPE html>
 <html>
 <head>
     <style>
         .mask1 {
-            -webkit-mask-image: url(character/PaintedBackground.png);
-            mask-image: url(character/PaintedBackground.png);
+            mask-composite:add;
             -webkit-mask-repeat: no-repeat;
             mask-repeat: no-repeat;
         }
@@ -14,17 +13,35 @@
 <body>
 
     <h1>The mask-image Property</h1>
-    <p>The image that is supposed to act as a mask (alpha)
-    <img src="character/PaintedBackground.png"/>
+    <p>
+        The image(s) that is supposed to act as a mask (alpha)
+        <img src="character/Sketch.png" style="height:400px;" />
+        <img src="background/SimpleBG.png" style="height:400px;" />
     </p>
 
-    <h3>An image with a mask layer image:</h3>
-    <div>
-        <img class="mask1" src="size_mask\MaskBust.png" alt="shadow" >
+
+    <div style="position:relative;height:400px">
+        Together
+        <div style="position:absolute; top:0; left:0">
+            <img src="background/SimpleBG.png" style="height:400px;" />
+        </div>
+        <div style="position:absolute; top:0; left:0">
+            <img src="character/Sketch.png" style="height:400px;" />
+        </div>
     </div>
 
     <h3>Original image:</h3>
-    <img src="size_mask\MaskBust.png" alt="shadow">
+    <img src="size_mask\MaskBust.png" alt="shadow" style="height:400px;">
+
+    <h3>An image with a mask layer image (additive):</h3>
+    <div>
+        <img id="size-mask"
+             class="mask1"
+             src="size_mask\MaskBust.png"
+             alt="shadow"
+             style="-webkit-mask-image: url(character/Sketch.png),url(background/SimpleBG.png); mask-image: url(character/Sketch.png),url(background/SimpleBG.png); ">
+    </div>
+    <!-- url(character/Sketch.png),url(background/SimpleBG.png) -->
 
 </body>
 </html>
