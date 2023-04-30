@@ -1,17 +1,26 @@
-﻿body
-{
-    background-color:#1b4553;
-}
-/*classes all LC no space
+﻿/*classes all LC no space
     ids all LC with - concat
     functions UC second word and beyond
 
 */
-.stackcontainer{
-    width:445px;
-    height:850px;
-    position:relative;
-    overflow:visible;
+
+/* -------------------- GENERAL --------------------*/
+
+body
+{
+    background-color:#1b4553;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    color:white;
+}
+
+a{
+    color:#A9F4FF;
+}
+
+a:visited{
+    color:#7CA9FF;
 }
 
 .flex{
@@ -21,6 +30,14 @@
 
 .top{
     z-index:3;
+}
+
+/*--------------------IMAGE STACK--------------------*/
+.stackcontainer{
+    width:445px;
+    height:850px;
+    position:relative;
+    overflow:visible;
 }
 
 .stack {
@@ -34,17 +51,48 @@ div.stack > img{
     height:850px;
 }
 
-.multiply { /* TODO rename*/
+.multiply {
     mix-blend-mode: multiply;
 }
 
-.masked{
-
+.mask {
+    mask-composite: add;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
 }
 
+
+/*--------------------INPUTS--------------------*/ /*TODO style better*/
 input[type=range][orient=vertical] {
     -webkit-appearance: slider-vertical; /* Chromium, but everything uses this now*/
     width: 8px;
     height: 175px;
     padding: 0 5px;
+    filter:brightness(0.8);
+    background: black;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: filter .2s;
+}
+
+
+input[type=range][orient=vertical]:hover {
+    filter: brightness(1);
+}
+
+input[type=range][orient=vertical]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: red;
+    cursor: pointer;
+}
+
+input[type=range][orient=vertical]::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: red;
+    cursor: pointer;
 }

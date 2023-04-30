@@ -6,10 +6,14 @@
     <title>commisions info</title>
 
     <link rel="stylesheet" href="CommStyleSheet.css" />
-    <script src="comm_java_script.js" ></script>
+
 </head>
 
 <body>
+    <div>
+        <p>Go <a href="index.html"> back </a></p>
+        <p> <a href="background/SimpleBg.png"> newlink</a></p>
+    </div>
     <div class="flex">
 
         <!--commision changer-->
@@ -26,31 +30,29 @@
 
             <!-- char length -->
             <div class="stack">
-                <img id="size-mask" 
-                     class="multiply"
+                <img id="size-mask"
+                     style="-webkit-mask-image: url(character/Sketch.png),url(background/SimpleBg.png); mask-image: url(character/Sketch.png),url(background/SimpleBg.png);"
+                     class="multiply mask"
                      src="size_mask\MaskBust.png"
                      alt="bust mask" />
             </div>
-
         </div>
 
+        <!--slider-->
         <div class="top">
-            <input type="range"
+            <input class="slider" 
+                   type="range"
                    orient="vertical"
                    min="0"
                    max="4"
                    id="range1" />
 
-            <script>
-                var slider = document.getElementById("range1");
 
-                slider.oninput = function () {
-                    //console.log(slider.value);
-                    switchChar(slider.value);
-                }
-            </script>
         </div>
     </div>
 
+
+    <!-- SCRIPT LOAD -->
+    <script src="comm_java_script.js"></script>
 </body>
 </html>
