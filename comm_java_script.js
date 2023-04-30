@@ -89,6 +89,18 @@ function getCharPath(i) {
     }
 }
 
+function getMaskPath(i) {
+    console.log("get mask path for " + i);
+    switch (i) {
+        case 3:
+            return "";
+        case 2:
+            return "size_mask/MaskBody.png";
+        case 1:
+            return "size_mask/MaskBust.png";
+    }
+}
+
 //function for addition mask
 function styleAllMasks(a) {
 

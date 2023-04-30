@@ -37,23 +37,51 @@
                      alt="bust mask" />
             </div>
         </div>
+        <div class="top vflex">
+            <!--completeness slider-->
+            <h2>Finish</h2>
+            <div class="top flex" style="height:180px">
+                <input type="range"
+                       orient="vertical"
+                       min="0"
+                       max="4"
+                       id="range1" />
+                <div class="vflex rangeLablecontainer">
+                    <p>With Background</p>
+                    <p>Shaded</p>
+                    <p>Colored</p>
+                    <p>Lineart</p>
+                    <p>Sketch</p>
+                </div>
+            </div>
 
-        <!--slider-->
-        <div class="top flex" style="height:400px">
-            <input type="range"
-                   orient="vertical"
-                   min="0"
-                   max="4"
-                   id="range1" />
-            <div class="vflex rangeLablecontainer">
-                <p>With Background</p>
-                <p>Shaded</p>
-                <p>Colored</p>
-                <p>Lineart</p>
-                <p>Sketch</p>
+            <!--size chooser-->
+            <div>
+                <h2>Size</h2>
+                <form>
+                    <div>
+                        <input type="radio" id="portrait" value="portrait" name="commSize" 
+                               onclick="setMask(getMaskPath(1))"
+                               />
+                        <label for="portrait"> Portrait </label>
+                    </div>
+                    <div>
+                        <input type="radio" id="body" value="body" name="commSize" 
+                               onclick="setMask(getMaskPath(2))"
+                               />
+                        <label for="body"> Body </label>
+                    </div>
+                    <div>
+                        <input type="radio" id="full" value="full" name="commSize" 
+                               onclick="setMask(getMaskPath(3))"
+                               />
+                        <label for="full"> Full Body </label>
+                    </div>
 
+                </form>
             </div>
         </div>
+        
     </div>
 
 
