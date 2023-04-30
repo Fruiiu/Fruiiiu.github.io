@@ -66,12 +66,12 @@ a {
 .stack {
     position: absolute;
     top: -40px;
-    left: -30px;
+    left: -33px;
     overflow: visible;
 }
 
 div.stack > img {
-    height: 750px;
+    height: 620px;
 }
 
 .multiply {
@@ -82,8 +82,8 @@ div.stack > img {
     mask-composite: add;
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
-    -webkit-mask-size: cover;
-    mask-size: cover;
+    -webkit-mask-size: contain;
+    mask-size: contain;
 }
 
 
