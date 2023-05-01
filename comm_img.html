@@ -37,6 +37,8 @@
                 <img id="char" src="character\Sketch.png" alt="character sketch" />
             </div>
 
+            <!--additionals-->
+
             <!-- char length -->
             <div class="stack">
                 <img id="size-mask"
@@ -93,17 +95,17 @@
                     <form>
                         <div>
                             <input type="radio" checked="checked" id="portrait" value="portrait" name="commSize"
-                                   onclick="setMask(getMaskPath(1))" />
+                                   onclick="onSizeChange(1)" />
                             <label for="portrait"> Portrait </label>
                         </div>
                         <div>
                             <input type="radio" id="body" value="body" name="commSize"
-                                   onclick="setMask(getMaskPath(2))" />
+                                   onclick="onSizeChange(2)" />
                             <label for="body"> Body </label>
                         </div>
                         <div>
                             <input type="radio" id="full" value="full" name="commSize"
-                                   onclick="setMask(getMaskPath(3))" />
+                                   onclick="onSizeChange(3)" />
                             <label for="full"> Full Body </label>
                         </div>
 
@@ -125,12 +127,12 @@
                 <div>
                     <h2> Additional Elements </h2>
                     <div class="flex center">
-                        <button type="button" class="arrbutton" onclick="TODO">
-                            <img src="input/ArrowButton.png" alt="Add Button" />
+                        <button type="button" class="arrbutton" onclick="onElementChange(-1)">
+                            <img title="Minus Element" src="input/ArrowButton.png" alt="Add Button" />
                         </button>
-                        <p id="ae-text"> 2 </p>
-                        <button type="button" class="arrbutton r" onclick="TODO">
-                            <img src="input/ArrowButton.png" alt="Subtract Button" />
+                        <p id="num-elements"> 0 </p>
+                        <button type="button" class="arrbutton r" onclick="onElementChange(1)">
+                            <img title="Add Element" src="input/ArrowButton.png" alt="Subtract Button" />
                         </button>
                     </div>
                 </div>

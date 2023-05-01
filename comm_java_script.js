@@ -2,6 +2,7 @@
 //variables needed
 var slider = document.getElementById("range1");
 var size_mask = document.getElementById("size-mask");
+var num_elements = document.getElementById("num-elements");
 
 //onload
 window.onload = function () {
@@ -21,6 +22,14 @@ slider.oninput = function () {
     styleAllMasks(slider.value);
 }
 
+function onSizeChange(i) {
+    setMask(getMaskPath(i));
+}
+
+function onElementChange(i) {
+    //helper for changing the additional elements number, reapplying mask
+    displayAE(i);
+}
 
 //other functions
 
@@ -137,4 +146,24 @@ function toURL(s) {
 function calcPrice(a1, a2, a3) {
     //a1 is finishedness, a2 is size of char, a3 is amount of extra elements added
     //TODO after both are added
+}
+
+
+//functions for setting the additional elements and displaying the number
+function displayAE(i) {
+    initial = Number(num_elements.innerHTML)
+    console.log(initial);
+
+    initial += i;
+
+    if (initial > 9) {
+        initial = 9;
+    }
+    else if (initial < 0) {
+        initial = 0;
+    }
+
+    num_elements.innerHTML = initial;
+
+
 }
