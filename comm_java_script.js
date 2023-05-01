@@ -1,8 +1,16 @@
 // JavaScript source code
+
 //variables needed
 var slider = document.getElementById("range1");
+
 var size_mask = document.getElementById("size-mask");
+
 var num_elements = document.getElementById("num-elements");
+
+const additionals = [];
+for (i =1; i < 10; i++) {
+    additionals.push(document.getElementById("add" + i));
+}
 
 //onload
 window.onload = function () {
@@ -152,7 +160,7 @@ function calcPrice(a1, a2, a3) {
 //functions for setting the additional elements and displaying the number
 function displayAE(i) {
     initial = Number(num_elements.innerHTML)
-    console.log(initial);
+    //console.log(initial);
 
     initial += i;
 
@@ -165,5 +173,19 @@ function displayAE(i) {
 
     num_elements.innerHTML = initial;
 
+    changeAEOpacities(initial);
+}
+
+function changeAEOpacities(i) {
+    //where i is the number of additionals available
+    for (j = 1; j < 10; j++) {
+        //console.log(additionals[j-1])
+        if (j <= i) {
+            additionals[j - 1].className = "opaque";
+        }
+        else {
+            additionals[j - 1].className = "seethrough";
+        }
+    }
 
 }
