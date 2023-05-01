@@ -34,6 +34,10 @@ a {
     flex-direction: column;
 }
 
+.center{
+    justify-content:center;
+}
+
 .wrap{
     flex-wrap:wrap;
 }
@@ -50,17 +54,16 @@ a {
 .shaded {
     width:inherit;
     position:relative;
+    margin-top:10px;
+    margin-bottom:10px;
 }
 
     .shaded > div {
-        width:inherit;
-        height:inherit;
-        margin-top: 5px;
-        margin-bottom: 10px;
         padding-top: 5px;
         padding-left: 10px;
         padding-right: 10px;
         padding-bottom: 15px;
+        resize:vertical;
     }
     .shaded > img{
         position:absolute;
@@ -75,18 +78,29 @@ a {
 
     width: inherit;
     top: -8px;
-    left: -8px;
+    left: -7px;
     transform: scale(1.1);
 }
 
 .frametl {
-    top:-8px;
-    left:-8px;
-    transform:scale(0.5);
+    transform: scale(0.3);
+    top: -69px;
+    left: -88px;
 }
-img.flipped{
-    -webkit-transform:scale(-1);
-    transform:scale(-1);
+.frametr {
+    transform: scale(0.4);
+    top: -33px;
+    right: -32px;
+}
+.framebl {
+    transform: scale(-0.4);
+    bottom: -33px;
+    left: -32px;
+}
+.framebr {
+    transform: scale(-0.3);
+    bottom: -69px;
+    right: -88px;
 }
 
 
@@ -190,11 +204,33 @@ input[type=range][orient=vertical] {
     margin-right:10px;
 }
 
-.custom{
-    appearance:none;
-    background-color:rgba(0, 0,0,0);
-    border:hidden;
+.arrbutton {
+    position:relative;
+    appearance: none;
+    background-color: rgba(0, 0,0,0);
+    border: hidden;
+    overflow:visible;
+    width:30px;
+    height:25px;
+    margin:4px;
+    padding:0px;
 }
-.custom>*:hover{
-    color:aquamarine;
-}
+    .arrbutton > img {
+        height:25px;
+        position:absolute;
+        margin:0px;
+        top:0px;
+        right:0px;
+        color: white;
+        filter: brightness(0.8);
+        transition:0.15s;
+    }
+    .arrbutton > *:hover {
+        color: aquamarine;
+        filter: brightness(1);
+    }
+    .arrbutton.r > *{
+        left:0px;
+        transform:scale(-1, 1);
+    }
+
