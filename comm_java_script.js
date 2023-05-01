@@ -135,6 +135,8 @@ function styleAllMasks(a) {
         urls += ", " + toURL(getBGPath(i));
     }
 
+    urls += getAdditionalsPaths();
+
     //putting the urls into css
     newStyle = "-webkit-mask-image:" + urls + "; mask-image:" + urls + ";";
 
@@ -159,7 +161,7 @@ function calcPrice(a1, a2, a3) {
 
 //functions for setting the additional elements and displaying the number
 function displayAE(i) {
-    initial = Number(num_elements.innerHTML)
+    initial = getNumAdditionals();
     //console.log(initial);
 
     initial += i;
@@ -187,5 +189,22 @@ function changeAEOpacities(i) {
             additionals[j - 1].className = "seethrough";
         }
     }
+
+}
+
+function getAdditionalsPaths() {
+    //where i is the number of additionals 
+    path = '';
+
+    for (i = 1; i <= getNumAdditionals(); i++) {
+        path += ( ","+ toURL("additionals/" + i + ".png") );
+        //additionals\#.png"
+    }
+    return path;
+}
+
+function getNumAdditionals() {
+    //get the number of additionals displayed
+    return Number(num_elements.innerHTML);
 
 }
