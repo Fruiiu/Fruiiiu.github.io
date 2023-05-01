@@ -151,7 +151,8 @@ div.stack > img {
 }
 
 
-/*--------------------INPUTS--------------------*/ /*TODO style better*/
+/*--------------------INPUTS--------------------*/
+/*  sliders  */
 .slidercontainer{
 
 }
@@ -210,6 +211,48 @@ input[type=range][orient=vertical] {
     margin-left:15px;
     margin-right:10px;
 }
+
+/*  Radios  */
+[type = radio]{ /*dissappear lol*/
+    opacity:0;
+    width:0;
+    height:0;
+    margin:0;
+}
+
+[type = radio] + label{
+    background:url(input/Radio0.png);
+    background-repeat:no-repeat;
+    background-size:contain;
+    transition:0.2s;
+
+    margin-left:0px;
+    padding-left:30px;
+
+    color:#A3BBC2;
+}
+
+    label:hover {
+        color: white;
+    }
+
+[type = radio]:checked + label {
+    background: url(input/Radio1.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: 0.2s;
+
+    color:white;
+    font-weight:bold;
+}
+
+
+
+
+
+
+
+/*  Arrow Buttons  */
 
 .arrbutton {
     position:relative;
