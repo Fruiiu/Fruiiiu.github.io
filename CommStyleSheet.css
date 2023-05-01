@@ -46,15 +46,49 @@ a {
     z-index: 3;
 }
 
+
 .shaded {
-    background-color: rgba( 28, 27, 40, 0.7);
-    margin-top: 5px;
-    margin-bottom: 10px;
-    padding-top: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 15px;
+    width:inherit;
+    position:relative;
 }
+
+    .shaded > div {
+        width:inherit;
+        height:inherit;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        padding-top: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 15px;
+    }
+    .shaded > img{
+        position:absolute;
+        overflow:visible;
+        z-index:-3;
+    }
+
+.framebg {
+    overflow: visible;
+    filter: brightness(0.3);
+    opacity: 0.6;
+
+    width: inherit;
+    top: -8px;
+    left: -8px;
+    transform: scale(1.1);
+}
+
+.frametl {
+    top:-8px;
+    left:-8px;
+    transform:scale(0.5);
+}
+img.flipped{
+    -webkit-transform:scale(-1);
+    transform:scale(-1);
+}
+
 
 .tos{
 }

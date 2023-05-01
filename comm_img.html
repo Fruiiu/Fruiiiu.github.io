@@ -51,61 +51,74 @@
         <div class="top vflex" style="width:182px;">
             <!--completeness slider-->
             <div class="shaded">
-                <h2>Finish</h2>
-                <div class="flex" style="height:180px">
-                    <input type="range"
-                           orient="vertical"
-                           min="0"
-                           max="4"
-                           id="range1" />
-                    <div class="vflex rangeLablecontainer">
-                        <p>With Background</p>
-                        <p>Shaded</p>
-                        <p>Colored</p>
-                        <p>Lineart</p>
-                        <p>Sketch</p>
+                <img class="framebg"
+                     style="height:250px";
+                     src="main/FrameBg.png" alt="" />
+                <img class="frametl" src="main/FrameL.png" alt="" />
+                <img class="frametr" src="main/FrameR.png" alt="" />
+                <img class="framebl flipped" src="main/FrameR.png" alt="" />
+                <img class="framebr flipped" src="main/FrameL.png" alt="" />
+
+                <div>
+                    <h2>Finish</h2>
+                    <div class="flex" style="height:180px">
+                        <input type="range"
+                               orient="vertical"
+                               min="0"
+                               max="4"
+                               id="range1" />
+                        <div class="vflex rangeLablecontainer">
+                            <p>With Background</p>
+                            <p>Shaded</p>
+                            <p>Colored</p>
+                            <p>Lineart</p>
+                            <p>Sketch</p>
+                        </div>
                     </div>
-                </div>
+                </div>  
             </div>
 
             <!--size chooser-->
             <div class="shaded">
-                <h2>Size</h2>
-                <form>
-                    <div>
-                        <input type="radio" checked="checked" id="portrait" value="portrait" name="commSize" 
-                               onclick="setMask(getMaskPath(1))"
-                               />
-                        <label for="portrait"> Portrait </label>
-                    </div>
-                    <div>
-                        <input type="radio" id="body" value="body" name="commSize" 
-                               onclick="setMask(getMaskPath(2))"
-                               />
-                        <label for="body"> Body </label>
-                    </div>
-                    <div>
-                        <input type="radio" id="full" value="full" name="commSize" 
-                               onclick="setMask(getMaskPath(3))"
-                               />
-                        <label for="full"> Full Body </label>
-                    </div>
+                <div>
+                    <h2>Size</h2>
+                    <form>
+                        <div>
+                            <input type="radio" checked="checked" id="portrait" value="portrait" name="commSize"
+                                   onclick="setMask(getMaskPath(1))" />
+                            <label for="portrait"> Portrait </label>
+                        </div>
+                        <div>
+                            <input type="radio" id="body" value="body" name="commSize"
+                                   onclick="setMask(getMaskPath(2))" />
+                            <label for="body"> Body </label>
+                        </div>
+                        <div>
+                            <input type="radio" id="full" value="full" name="commSize"
+                                   onclick="setMask(getMaskPath(3))" />
+                            <label for="full"> Full Body </label>
+                        </div>
 
-                </form>
+                    </form>
+                </div>
+                
             </div>
 
             <!--additional elements chooser-->
             <div class="shaded">
-                <h2> Additional Elements </h2>
-                <div class="flex">
-                    <button type="button" class="custom" onclick="TODO"> 
-                        <img src="AddButtonTODO" alt="Add Button"/> 
-                    </button>
-                    <p id="ae-text"> numbers here </p>
-                    <button type="button" class="custom" onclick="TODO">
-                        <img src="SumButtonTODO" alt="Subtract Button"/> 
-                    </button>
+                <div>
+                    <h2> Additional Elements </h2>
+                    <div class="flex">
+                        <button type="button" class="custom" onclick="TODO">
+                            <img src="AddButtonTODO" alt="Add Button" />
+                        </button>
+                        <p id="ae-text"> numbers here </p>
+                        <button type="button" class="custom" onclick="TODO">
+                            <img src="SumButtonTODO" alt="Subtract Button" />
+                        </button>
+                    </div>
                 </div>
+                
             </div>
 
         
