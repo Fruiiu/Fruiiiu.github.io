@@ -11,7 +11,7 @@ body {
     background-size:200px;
 }
 
-p, h1, h2, h3, h4, h5, h6,label {
+p, h1, h2, h3, h4, h5, h6,label,img,button {
     margin:7px;
     color: white;
 }
@@ -32,6 +32,14 @@ a {
 .vflex {
     display: flex;
     flex-direction: column;
+}
+
+.wrap{
+    flex-wrap:wrap;
+}
+
+.wrap>*{
+    max-height:570px;
 }
 
 .top {
@@ -58,7 +66,7 @@ a {
 
 /*--------------------IMAGE STACK--------------------*/
 .stackcontainer {
-    width: 420px;
+    min-width: 420px;
     height: 750px;
     position: relative;
     overflow: visible;
@@ -144,6 +152,15 @@ input[type=range][orient=vertical] {
 .rangeLablecontainer > p{
     margin-top:3px;
     margin-bottom: 17px;
-    margin-left:10px;
+    margin-left:15px;
     margin-right:10px;
+}
+
+.custom{
+    appearance:none;
+    background-color:rgba(0, 0,0,0);
+    border:hidden;
+}
+.custom>*:hover{
+    color:aquamarine;
 }

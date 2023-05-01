@@ -23,7 +23,7 @@
 
     </div>
     <!--commision interactible-->
-    <div class="flex">
+    <div class="flex wrap">
 
         <!--commision display-->
         <div class="stackcontainer">
@@ -48,7 +48,7 @@
         </div>
         
         <!--commision settings-->
-        <div class="top vflex" style="min-width:176px;">
+        <div class="top vflex" style="width:182px;">
             <!--completeness slider-->
             <div class="shaded">
                 <h2>Finish</h2>
@@ -73,7 +73,7 @@
                 <h2>Size</h2>
                 <form>
                     <div>
-                        <input type="radio" id="portrait" value="portrait" name="commSize" 
+                        <input type="radio" checked="checked" id="portrait" value="portrait" name="commSize" 
                                onclick="setMask(getMaskPath(1))"
                                />
                         <label for="portrait"> Portrait </label>
@@ -95,6 +95,18 @@
             </div>
 
             <!--additional elements chooser-->
+            <div class="shaded">
+                <h2> Additional Elements </h2>
+                <div class="flex">
+                    <button type="button" class="custom" onclick="TODO"> 
+                        <img src="AddButtonTODO" alt="Add Button"/> 
+                    </button>
+                    <p id="ae-text"> numbers here </p>
+                    <button type="button" class="custom" onclick="TODO">
+                        <img src="SumButtonTODO" alt="Subtract Button"/> 
+                    </button>
+                </div>
+            </div>
 
         
         </div>
