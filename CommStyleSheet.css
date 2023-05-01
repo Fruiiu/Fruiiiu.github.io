@@ -143,6 +143,13 @@ div.stack > img {
     mask-size: contain;
 }
 
+.opaque{
+    opacity:1;
+}
+.seethrough{
+    opacity:0;
+}
+
 
 /*--------------------INPUTS--------------------*/ /*TODO style better*/
 .slidercontainer{
