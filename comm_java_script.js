@@ -24,6 +24,7 @@ window.onload = function () {
 
 //on inputs
 slider.oninput = function () {
+    onExampleChange();
     //console.log(slider.value);
     switchChar(slider.value);
 
@@ -31,12 +32,20 @@ slider.oninput = function () {
 }
 
 function onSizeChange(i) {
+    onExampleChange();
     setMask(getMaskPath(i));
 }
 
 function onElementChange(i) {
+    onExampleChange();
     //helper for changing the additional elements number, reapplying mask
     displayAE(i);
+    styleAllMasks(slider.value);
+}
+
+//every input of example change
+function onExampleChange() {
+    
 }
 
 //other functions
@@ -107,7 +116,7 @@ function getCharPath(i) {
 }
 
 function getMaskPath(i) {
-    console.log("get mask path for " + i);
+    //console.log("get mask path for " + i);
     switch (i) {
         case 3:
             return "";
@@ -140,7 +149,7 @@ function styleAllMasks(a) {
     //putting the urls into css
     newStyle = "-webkit-mask-image:" + urls + "; mask-image:" + urls + ";";
 
-    console.log("WE GOT:" + newStyle);
+    //console.log("WE GOT:" + newStyle);
 
     //setting the new css
     size_mask.style.cssText = newStyle;
