@@ -7,7 +7,8 @@
 /* -------------------- GENERAL --------------------*/
 
 body {
-    background-color: #1b4553;
+    background:url(main/Wallpaper.png);
+    background-size:200px;
 }
 
 p, h1, h2, h3, h4, h5, h6,label {
@@ -94,19 +95,19 @@ div.stack > img {
 
 input[type=range][orient=vertical] {
     -webkit-appearance: slider-vertical; /* Chromium, but everything uses this now*/
-    width: 8px;
+    width: 18px;
     height: 175px;
-    padding: 0 5px;
-
-
-    background: black;
     outline: none;
+
+    background: url(input/Slider.png);
+    background-position-y: 1px;
+    background-size: contain;
+    background-repeat: no-repeat;
 
     -webkit-transition: .2s;
     transition: filter .2s;
     filter: brightness(0.8);
 }
-
 
     input[type=range][orient=vertical]:hover {
         filter: brightness(1);
@@ -115,18 +116,27 @@ input[type=range][orient=vertical] {
     input[type=range][orient=vertical]::-webkit-slider-thumb {
         -webkit-appearance: none;
         appearance: none;
-        width: 25px;
+        width: 46px;
         height: 25px;
-        background: red;
         cursor: pointer;
+        background: url(input/Thumb.png);
+        background-position-x: 4px;
+        background-size: cover;
+        background-repeat: no-repeat;
     }
 
     input[type=range][orient=vertical]::-moz-range-thumb {
-        width: 25px;
+        width: 46px;
         height: 25px;
-        background: red;
+        border:0;
         cursor: pointer;
+
+        background: url(input/Thumb.png);
+        background-position-x:4px;
+        background-size:cover;
+        background-repeat:no-repeat;
     }
+
 
 .rangeLablecontainer{
 }
