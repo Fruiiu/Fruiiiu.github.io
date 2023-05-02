@@ -1,54 +1,18 @@
-﻿﻿
-<!DOCTYPE html>
-<html>
+﻿<!DOCTYPE html>
+<html lang="en">
 <head>
-    <style>
-        .mask1 {
-            mask-composite: add;
-            -webkit-mask-repeat: no-repeat;
-            mask-repeat: no-repeat;
-        }
-    </style>
+    <title>Test Page</title>
 </head>
 <body>
     <div>
         <h1> Links </h1>
         <ul>
             <li> <a href="comm_img.html"> Commision Site (unfinished)</a></li>
+            <li> <a href="portfolio.html">Portfolio Page</a> </li>
         </ul>
     </div>
-
-    <h1>The mask-image Property</h1>
-    <p>
-        The image(s) that is supposed to act as a mask (alpha)
-        <img src="character/Sketch.png" style="height:400px;" />
-        <img src="background/SimpleBg.png" style="height:400px;" />
-    </p>
-
-
-    <div style="position:relative;height:400px">
-        Together
-        <div style="position:absolute; top:0; left:0">
-            <img src="background/SimpleBg.png" style="height:400px;" />
-        </div>
-        <div style="position:absolute; top:0; left:0">
-            <img src="character/Sketch.png" style="height:400px;" />
-        </div>
-    </div>
-
-    <h3>Original image:</h3>
-    <img src="size_mask\MaskBust.png" alt="shadow" style="height:400px;">
-
-    <h3>An image with a mask layer image (additive):</h3>
-    <div>
-        <img id="size-mask"
-             class="mask1"
-             src="size_mask\MaskBust.png"
-             alt="shadow"
-             style="-webkit-mask-image: url(character/Sketch.png),url(background/SimpleBg.png); mask-image: url(character/Sketch.png),url(background/SimpleBg.png); ">
-    </div>
-    <!-- url(character/Sketch.png),url(background/SimpleBg.png) -->
-
+    <h1>data testing (and data as in I'm using another js file lord help me)</h1>
+    <script src="ImgData.js"></script> <!--import at beginning?-->
 </body>
 </html>
 

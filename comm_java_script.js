@@ -17,7 +17,7 @@ window.onload = function () {
     console.log("onload called");
 
     switchChar(slider.value);
-    setMask(getMaskPath(i));
+    setMask(getMaskPath(1));
 
     styleAllMasks(slider.value);
 
