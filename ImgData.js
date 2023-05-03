@@ -1,43 +1,54 @@
 // JavaScript source code
+/*
+ * 
+ * this file contains all the image data needed as an array,
+ * Objects are referenced, so changng one via reference will change all others
+ * 
+ * append to the beggining of html (or just before all other scripts that use data)
+ * otherwise reference errors will appear
+ * 
+ * for imae acess: set to public in drive then copy the last bit of jibberish into id attribute
+*/
 
-//this file contains all the image data needed as an array,
-//will test if adding them to another arry will create the same reference
+/*=========================| DATA |========================= */
+
 
 const allImgs = [
-    //example img
+    //image objects
     {
-        src: "imgs/Example.png",
+        //google access
+        id: "imgs/Example.png",
+
+        //portfolio and gallery settings
         descrip: "This is an example image, it does not atually exist and the alt should be shown",
         portfolio: false,
+
+        //commision settings
         numChar: 0,
         finish: 0,
         size: 0
-    },
-    {
-        src: "imgs/EX2.png",
-        descrip: "Only one line of descrip is pain",
-        portfolio: true,
-        numChar: 3,
-        finish: 2,
-        size: 10 //this is not valid lol, add a func to make sure its fine?
-    },
-    {
-        src: "imgs/Example.png",
-        descrip: "This is an example image, it does not atually exist and the alt should be shown",
-        portfolio: false,
-        numChar: 4,
-        finish: 5,
-        size: 3
-    },
+        //maybe add another one for commsion decription?
+    }
 ];
-//test if this can be appended into html
 
+
+//image sets, will be used when organising things in portfolio
 const imgSets = [
-    [allImgs[0], allImgs[1]], //descrip:...
-    [allImgs[1], allImgs[2]],
-    [allImgs[2]]
+    [] //descrip of set ...
 ];
 
 console.log(allImgs);
-console.log(imgSets[1][0]);
-imgSets[1][0].descrip = "Changed ! this is index 1 in all imgs";
+
+
+/* =========================| Funtions |========================= */
+
+//function for creating google docs path
+function getGooglePath(id) {
+    //id rrefers to the long string after the google share thing
+    return "https://drive.google.com/uc?id=" + id;
+}
+//console.log(getGooglePath("188QjvW06eDdlZjhWN3du4Njqg6FshEq-"));
+
+//function for creating modal layout
+
+//function for creating gallery inside layout

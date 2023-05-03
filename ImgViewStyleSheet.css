@@ -1,0 +1,56 @@
+﻿/* this is applicable to all pages using image viewer
+    this refers to image layout, image modals, etc
+*/
+
+/* MODALS |==========================================*/
+.modal {
+    /* toggle block to none */
+    display: block;
+    z-index: 6; /*3 is taken by top elements*/
+    /*positioning*/
+    position: fixed; /* Stay in place */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    /*container prperties*/
+    display: flex;
+    overflow: scroll;
+    flex-direction: column;
+    background: url(https://drive.google.com/uc?id=1es7pwjw_tmTu3WvGvu0VCDTwmtuZq3pP);
+    /*replace with appropreate background*/
+}
+
+    /* Modal Content */
+/*to add when nessecary, for now find in image containers*/
+
+/*modal close button*/
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+    .close:hover,
+    .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+/* IMG DISPLAYS |============================================== */
+.expandedcontainer{
+    width:70%;
+    margin:auto;
+}
+
+/* TRANSPARENT IMG BG |========================================*/
+img.red {
+    background: radial-gradient(#C62222, #692138);
+}
+
+img{
+    width:100%;
+}
+
