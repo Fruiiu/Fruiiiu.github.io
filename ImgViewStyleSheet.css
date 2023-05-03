@@ -1,6 +1,10 @@
 ﻿/* this is applicable to all pages using image viewer
     this refers to image layout, image modals, etc
 */
+/* GENERAL |======================================*/
+*{
+    color:white;
+}
 
 /* MODALS |==========================================*/
 .modal {
@@ -17,32 +21,52 @@
     display: flex;
     overflow: scroll;
     flex-direction: column;
-    background: url(https://drive.google.com/uc?id=1es7pwjw_tmTu3WvGvu0VCDTwmtuZq3pP);
+    background: linear-gradient(
+        90deg, 
+        rgba(20,10,20, 0.6), 
+        rgba(20,10,20, 0.8) 15% 85%, 
+        rgba(20,10,20, 0.6));
     /*replace with appropreate background*/
 }
 
     /* Modal Content */
 /*to add when nessecary, for now find in image containers*/
 
+
 /*modal close button*/
+/*explaination : sticky container to stay fixed
+
+*/
 .close {
-    color: #aaaaaa;
-    float: right;
+    position:fixed;
+    top:0px;
+    right:10px;
+}
+.close>p {
     font-size: 28px;
-    font-weight: bold;
+    font-weight: bolder;
+    margin-left:20px;
+    margin-right:20px;
+    margin-top:10px;
+    margin-bottom:10px;
+
+    color:black;
+    opacity:0.6;
+    transition:0.2s;
 }
 
-    .close:hover,
-    .close:focus {
-        color: #000;
-        text-decoration: none;
-        cursor: pointer;
+    .close>p:hover,
+    .close>p:focus {
+        color: black;
+        opacity:0.9;
+        font-size:30px;
     }
 
 /* IMG DISPLAYS |============================================== */
 .expandedcontainer{
     width:70%;
-    margin:auto;
+    margin-left:auto;
+    margin-right:auto;
 }
 
 /* TRANSPARENT IMG BG |========================================*/
