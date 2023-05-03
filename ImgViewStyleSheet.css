@@ -63,13 +63,16 @@
     }
 
 /* IMG DISPLAYS |============================================== */
-.expandedcontainer{
+.expcont{
     width:70%;
     margin-left:auto;
     margin-right:auto;
 }
 
 /* TRANSPARENT IMG BG |========================================*/
+img.none{
+
+}
 img.red {
     background: radial-gradient(#C62222, #692138);
 }
@@ -78,3 +81,17 @@ img{
     width:100%;
 }
 
+/* OTHER IMG STUFF |======================================== */
+/*note this is only to be used for thumbnail displays*/
+.imgframe{
+    position:relative;
+}
+
+.imgcont{
+    width:inherit;
+    position:absolute;
+}
+
+.wewewe{
+    background:orange;
+}
