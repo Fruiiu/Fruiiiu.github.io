@@ -1628,6 +1628,329 @@ const allImgs = [
         additionals: function () {
             return this.numChar - 1;
         }
+    },
+    {
+        //
+        //google access
+        id: "1xvjxqBvkGMWlLgNIHaThs-iqUVP3EVG1",
+
+        //gallery settings
+        name: "Jasmine",
+        descrip: "",
+        bg: "None",
+        ratio: "536/405",
+
+        //commision settings
+        numChar: 1,
+        finish: 4, //[0, 4]
+        size: 2,  //[1,3]
+        additionals: function () {
+            return this.numChar - 1;
+        }
+    },
+    {
+        //
+        //google access
+        id: "17aogLMRW35qH6nPZ5I4WKKGTdT8OFfny",
+
+        //gallery settings
+        name: "Our Queen",
+        descrip: "Infected with another soul, their mind is not their own.",
+        bg: "None",
+        ratio: "1999/3107",
+
+        //commision settings
+        numChar: 1,
+        finish: 3, //[0, 4]
+        size: 3,  //[1,3]
+        additionals: function () {
+            return this.numChar - 1;
+        }
+    },
+    {
+        //
+        //google access
+        id: "1NssCSf7MQVM9oQUPaFIc73nv6N8s0616",
+
+        //gallery settings
+        name: "Butterfly Heir",
+        descrip: "",
+        bg: "magenta",
+        ratio: "1",
+
+        //commision settings
+        numChar: 1,
+        finish: 3, //[0, 4]
+        size: 3,  //[1,3]
+        additionals: function () {
+            return this.numChar - 1;
+        }
+    },
+    {
+        //
+        //google access
+        id: "11K2qHY6kD_LEkGQ3fUcnsw7nQ3DWhel7",
+
+        //gallery settings
+        name: "Butterfly Heir Back",
+        descrip: "The unfinished sketch of the back of the character.",
+        bg: "None",
+        ratio: "1",
+
+        //commision settings
+        numChar: 1,
+        finish: 0, //[0, 4]
+        size: 3,  //[1,3]
+        additionals: function () {
+            return this.numChar - 1;
+        }
+    },
+    {
+        //
+        //google access
+        id: "178uAEXgbzYA13Yt2Guw27sPCccTY_7E4",
+
+        //gallery settings
+        name: "Infected",
+        descrip: "That's a pretty dramatic before and after. ",
+        bg: "None",
+        ratio: "125/214",
+
+        //commision settings
+        numChar: 2,
+        finish: 4, //[0, 4]
+        size: 3,  //[1,3]
+        additionals: function () {
+            return this.numChar - 1;
+        }
+    },
+    {
+        //
+        //google access
+        id: "1M8bUvyFVoFzSxfbq9VQxLWtOBCRlxAlL",
+
+        //gallery settings
+        name: "The One that Travels",
+        descrip: "Character design. ",
+        bg: "None",
+        ratio: "81/59",
+
+        //commision settings
+        numChar: 14,
+        finish: 2, //[0, 4]
+        size: 3,  //[1,3]
+        additionals: function () {
+            return this.numChar - 1;
+        }
+    },
+    {
+        //
+        //google access
+        id: "1JpH1luki_z_MeU-B7hRcjRaayD8xdMYW",
+
+        //gallery settings
+        name: "Greenhouse",
+        descrip: "",
+        bg: "None",
+        ratio: "1",
+
+        //commision settings
+        numChar: 1,
+        finish: 4, //[0, 4]
+        size: 3,  //[1,3]
+        additionals: function () {
+            return this.numChar - 1;
+        }
+    },
+    {
+        //
+        //google access
+        id: "1YEgyRQREDwO9yk2bul2oYGzJCLmKFKPg",
+
+        //gallery settings
+        name: "Goat",
+        descrip: "Redesign of a character. ",
+        bg: "white",
+        ratio: "1",
+
+        //commision settings
+        numChar: 1,
+        finish: 2, //[0, 4]
+        size: 3,  //[1,3]
+        additionals: function () {
+            return this.numChar - 1;
+        }
+    },
+    {
+        //
+        //google access
+        id: "1LehzblQdFgqcua9W6MG4W39G5vJNb_K9",
+
+        //gallery settings
+        name: "Genshin Wish Art",
+        descrip: "Genshin fan character. This is the wishart for her ealier design. ",
+        bg: "None",
+        ratio: "16/9",
+
+        //commision settings
+        numChar: 1,
+        finish: 4, //[0, 4]
+        size: 3,  //[1,3]
+        additionals: function () {
+            return this.numChar - 1;
+        }
+    },
+    {
+        //
+        //google access
+        id: "1HlsrZeq6xciY6RbiTHzagwYI68DdH6qU",
+
+        //gallery settings
+        name: "Posed Front",
+        descrip: "",
+        bg: "blue",
+        ratio: "1/2",
+
+        //commision settings
+        numChar: 1,
+        finish: 3, //[0, 4]
+        size: 3,  //[1,3]
+        additionals: function () {
+            return this.numChar - 1;
+        }
+    },
+    {
+        //
+        //google access
+        id: "1eATR3OJsziXAx4hLKeLRuzwR9i87UQ_M",
+
+        //gallery settings
+        name: "Posed Front",
+        descrip: "",
+        bg: "blue",
+        ratio: "1/2",
+
+        //commision settings
+        numChar: 1,
+        finish: 3, //[0, 4]
+        size: 3,  //[1,3]
+        additionals: function () {
+            return this.numChar - 1;
+        }
+    },
+    {
+        //
+        //google access
+        id: "1ysD_MVQHT6N1S2Naggdl8SV_ryoJY_eQ",
+
+        //gallery settings
+        name: "",
+        descrip: "",
+        bg: "None",
+        ratio: "3/4",
+
+        //commision settings
+        numChar: 0,
+        finish: 3, //[0, 4]
+        size: 0,  //[1,3]
+        additionals: function () {
+            return this.numChar - 1;
+        }
+    },
+    {
+        //
+        //google access
+        id: "1g1CAuAx1jieltZRzXE5tat5LZzF-xHaG",
+
+        //gallery settings
+        name: "",
+        descrip: "",
+        bg: "None",
+        ratio: "3/4",
+
+        //commision settings
+        numChar: 0,
+        finish: 3, //[0, 4]
+        size: 0,  //[1,3]
+        additionals: function () {
+            return this.numChar - 1;
+        }
+    },
+    {
+        //
+        //google access
+        id: "15XdaFzkXJ7xbTwpkHUEXH0chw9XVij_A",
+
+        //gallery settings
+        name: "",
+        descrip: "",
+        bg: "None",
+        ratio: "3/4",
+
+        //commision settings
+        numChar: 0,
+        finish: 3, //[0, 4]
+        size: 0,  //[1,3]
+        additionals: function () {
+            return this.numChar - 1;
+        }
+    },
+    {
+        //
+        //google access
+        id: "1AXSnbWYMEdbjGC5vB23uA__yOWYfN-h-",
+
+        //gallery settings
+        name: "",
+        descrip: "",
+        bg: "None",
+        ratio: "3/4",
+
+        //commision settings
+        numChar: 0,
+        finish: 3, //[0, 4]
+        size: 0,  //[1,3]
+        additionals: function () {
+            return this.numChar - 1;
+        }
+    },
+    {
+        //
+        //google access
+        id: "1V3J6dQCKrWC0oTEHoxlIb7mC0x-pSgUE",
+
+        //gallery settings
+        name: "",
+        descrip: "",
+        bg: "None",
+        ratio: "3/4",
+
+        //commision settings
+        numChar: 0,
+        finish: 3, //[0, 4]
+        size: 0,  //[1,3]
+        additionals: function () {
+            return this.numChar - 1;
+        }
+    },
+    {
+        //
+        //google access
+        id: "1eQhYs7te8_o-GyrhiMfl73o26Q8uNdVU",
+
+        //gallery settings
+        name: "",
+        descrip: "Character turn-around for Marianna's 3D model. ",
+        bg: "blue",
+        ratio: "2/1",
+
+        //commision settings
+        numChar: 1,
+        finish: 3, //[0, 4]
+        size: 3,  //[1,3]
+        additionals: function () {
+            return this.numChar - 1;
+        }
     }
 
 
@@ -1667,7 +1990,7 @@ const allImgs = [
 console.log(allImgs.length);
 var hey = document.getElementById("hey");
 v = "";
-for (i = 84; i < allImgs.length; i++) {//
+for (i = 85; i < allImgs.length; i++) {//
     v += getDiv(i);
 }
 hey.innerHTML = v;

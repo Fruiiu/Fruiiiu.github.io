@@ -94,6 +94,9 @@ img.orange{
 img.black{
     background:radial-gradient(#000000, #001B28);
 }
+img.blue{
+    background:radial-gradient(#379CC5, #254379);
+}
 
 /* OTHER IMG STUFF |======================================== */
 /*note this is only to be used for thumbnail displays*/
