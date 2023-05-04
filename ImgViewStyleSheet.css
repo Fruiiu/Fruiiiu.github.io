@@ -76,7 +76,9 @@ img.none{
 img.red {
     background: radial-gradient(#C62222, #692138);
 }
-
+img.white {
+    background: radial-gradient(white, #D3F1F4);
+}
 img{
     width:100%;
 }
@@ -94,4 +96,9 @@ img{
 
 .wewewe{
     background:orange;
+}
+
+div.test{
+    width:100%;
+    aspect-ratio:1/1;
 }
