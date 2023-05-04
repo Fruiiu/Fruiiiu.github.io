@@ -688,7 +688,7 @@ const allImgs = [
         name: "Shading Tests",
         descrip: "Creating masks for shadows and playing around with blend modes on procreate.",
         bg: "None",
-        ratio: "TODO",
+        ratio: "1094/1031",
 
         //commision settings
         numChar: 1,
@@ -704,15 +704,15 @@ const allImgs = [
         id: "19R7LPyjecNUEvY0u0NJd-NLXsT0IK8f1",
 
         //gallery settings
-        name: "___",
-        descrip: "___",
-        bg: "___",
-        ratio: "TODO",
+        name: "Glass World",
+        descrip: "Trying out a new style. ",
+        bg: "None",
+        ratio: "403/239",
 
         //commision settings
-        numChar: 0,
-        finish: 0, //[0, 4]
-        size: 0,  //[1,3]
+        numChar: 1,
+        finish: 4, //[0, 4]
+        size: 3,  //[1,3]
         additionals: function () {
             return this.numChar - 1;
         }
@@ -723,15 +723,15 @@ const allImgs = [
         id: "1KrTsOdQFNbAdv3-okeZGqBiCb5HHaal-",
 
         //gallery settings
-        name: "___",
-        descrip: "___",
-        bg: "___",
-        ratio: "TODO",
+        name: "Dragon Girl",
+        descrip: "This might have been for the new year. ",
+        bg: "None",
+        ratio: "1/2",
 
         //commision settings
-        numChar: 0,
-        finish: 0, //[0, 4]
-        size: 0,  //[1,3]
+        numChar: 2,
+        finish: 4, //[0, 4]
+        size: 3,  //[1,3]
         additionals: function () {
             return this.numChar - 1;
         }
@@ -742,15 +742,15 @@ const allImgs = [
         id: "10GKH1Liw4Uwqs1VeSld39NTf1ieCStLP",
 
         //gallery settings
-        name: "___",
-        descrip: "___",
-        bg: "___",
-        ratio: "TODO",
+        name: "Goat",
+        descrip: "Wanted to draw dramatic eyelashes. ",
+        bg: "magenta",
+        ratio: "304/441",
 
         //commision settings
-        numChar: 0,
-        finish: 0, //[0, 4]
-        size: 0,  //[1,3]
+        numChar: 1,
+        finish: 3, //[0, 4]
+        size: 1,  //[1,3]
         additionals: function () {
             return this.numChar - 1;
         }
@@ -761,15 +761,15 @@ const allImgs = [
         id: "1JE60Y0QKAMvQU2Yflx4Ce42rC2b_WHG5",
 
         //gallery settings
-        name: "___",
-        descrip: "___",
-        bg: "___",
-        ratio: "TODO",
+        name: "Queen",
+        descrip: "Her character design got lost.",
+        bg: "white",
+        ratio: "343/465",
 
         //commision settings
-        numChar: 0,
+        numChar: 1,
         finish: 0, //[0, 4]
-        size: 0,  //[1,3]
+        size: 1,  //[1,3]
         additionals: function () {
             return this.numChar - 1;
         }
@@ -780,15 +780,15 @@ const allImgs = [
         id: "1QMKyT9bNGbh7v_gFtJSvjPgoF3lP-41U",
 
         //gallery settings
-        name: "___",
-        descrip: "___",
-        bg: "___",
-        ratio: "TODO",
+        name: "Early Moth",
+        descrip: "The earlier design for moth. ",
+        bg: "None",
+        ratio: "425/511",
 
         //commision settings
-        numChar: 0,
-        finish: 0, //[0, 4]
-        size: 0,  //[1,3]
+        numChar: 1,
+        finish: 2, //[0, 4]
+        size: 2,  //[1,3]
         additionals: function () {
             return this.numChar - 1;
         }
@@ -799,15 +799,15 @@ const allImgs = [
         id: "1felf2hk2-gscDXn_EJ62i4qQwAbcs5Co",
 
         //gallery settings
-        name: "___",
-        descrip: "___",
-        bg: "___",
-        ratio: "TODO",
+        name: "Spotlight",
+        descrip: "Spotlight lighting test.",
+        bg: "none",
+        ratio: "363/410",
 
         //commision settings
-        numChar: 0,
-        finish: 0, //[0, 4]
-        size: 0,  //[1,3]
+        numChar: 1,
+        finish: 3, //[0, 4]
+        size: 1,  //[1,3]
         additionals: function () {
             return this.numChar - 1;
         }
@@ -818,15 +818,15 @@ const allImgs = [
         id: "1BwupXvQYO6bZNKG87MRPiv-wWICAULh2",
 
         //gallery settings
-        name: "___",
-        descrip: "___",
-        bg: "___",
-        ratio: "TODO",
+        name: "Dust",
+        descrip: "Testing backlight. ",
+        bg: "none",
+        ratio: "74/81",
 
         //commision settings
-        numChar: 0,
-        finish: 0, //[0, 4]
-        size: 0,  //[1,3]
+        numChar: 1,
+        finish: 3, //[0, 4]
+        size: 1,  //[1,3]
         additionals: function () {
             return this.numChar - 1;
         }
@@ -837,15 +837,15 @@ const allImgs = [
         id: "1_4eHfA2tXxSh6zxNhGmQo8v8CpOqQ4ip",
 
         //gallery settings
-        name: "___",
-        descrip: "___",
-        bg: "___",
-        ratio: "TODO",
+        name: "Smile",
+        descrip: "",
+        bg: "green",
+        ratio: "577/934",
 
         //commision settings
-        numChar: 0,
-        finish: 0, //[0, 4]
-        size: 0,  //[1,3]
+        numChar: 1,
+        finish: 3, //[0, 4]
+        size: 2,  //[1,3]
         additionals: function () {
             return this.numChar - 1;
         }
@@ -856,15 +856,15 @@ const allImgs = [
         id: "1S3l_DxpyKOILQYjY0sMjJxq96696fY8u",
 
         //gallery settings
-        name: "___",
-        descrip: "___",
-        bg: "___",
-        ratio: "TODO",
+        name: "Smile Open",
+        descrip: "",
+        bg: "green",
+        ratio: "589/924",
 
         //commision settings
-        numChar: 0,
-        finish: 0, //[0, 4]
-        size: 0,  //[1,3]
+        numChar: 1,
+        finish: 3, //[0, 4]
+        size: 2,  //[1,3]
         additionals: function () {
             return this.numChar - 1;
         }
@@ -875,15 +875,15 @@ const allImgs = [
         id: "1eto4noSsFLBrvp45_Ogd4IUNwF_10tDp",
 
         //gallery settings
-        name: "___",
-        descrip: "___",
-        bg: "___",
-        ratio: "TODO",
+        name: "Surprised",
+        descrip: "",
+        bg: "green",
+        ratio: "273/451",
 
         //commision settings
-        numChar: 0,
-        finish: 0, //[0, 4]
-        size: 0,  //[1,3]
+        numChar: 1,
+        finish: 3, //[0, 4]
+        size: 2,  //[1,3]
         additionals: function () {
             return this.numChar - 1;
         }
@@ -894,15 +894,15 @@ const allImgs = [
         id: "1oYay2CDTBLzxjjMmIRkZBUjUIs8O8DTF",
 
         //gallery settings
-        name: "___",
-        descrip: "___",
-        bg: "___",
-        ratio: "TODO",
+        name: "Sad",
+        descrip: "",
+        bg: "green",
+        ratio: "139/214",
 
         //commision settings
-        numChar: 0,
-        finish: 0, //[0, 4]
-        size: 0,  //[1,3]
+        numChar: 1,
+        finish: 3, //[0, 4]
+        size: 2,  //[1,3]
         additionals: function () {
             return this.numChar - 1;
         }
@@ -913,15 +913,15 @@ const allImgs = [
         id: "1z9yaRxwiIW3ojZ9wT5_uf2X3FRW45bH_",
 
         //gallery settings
-        name: "___",
-        descrip: "___",
-        bg: "___",
-        ratio: "TODO",
+        name: "Angry",
+        descrip: "",
+        bg: "green",
+        ratio: "541/873",
 
         //commision settings
-        numChar: 0,
-        finish: 0, //[0, 4]
-        size: 0,  //[1,3]
+        numChar: 1,
+        finish: 3, //[0, 4]
+        size: 2,  //[1,3]
         additionals: function () {
             return this.numChar - 1;
         }
@@ -932,15 +932,15 @@ const allImgs = [
         id: "1qEFgyEtmkJb-gbu68ETHl6ODhsZtMXX6",
 
         //gallery settings
-        name: "___",
-        descrip: "___",
-        bg: "___",
-        ratio: "TODO",
+        name: "Shocked",
+        descrip: "",
+        bg: "green",
+        ratio: "541/873",
 
         //commision settings
-        numChar: 0,
-        finish: 0, //[0, 4]
-        size: 0,  //[1,3]
+        numChar: 1,
+        finish: 3, //[0, 4]
+        size: 2,  //[1,3]
         additionals: function () {
             return this.numChar - 1;
         }
@@ -951,15 +951,15 @@ const allImgs = [
         id: "1y-E2OZsOU0FJnUOWDxiI7ACwHFq9G8wu",
 
         //gallery settings
-        name: "___",
-        descrip: "___",
-        bg: "___",
-        ratio: "TODO",
+        name: "Close Eye Smile",
+        descrip: "",
+        bg: "green",
+        ratio: "568/875",
 
         //commision settings
-        numChar: 0,
-        finish: 0, //[0, 4]
-        size: 0,  //[1,3]
+        numChar: 1,
+        finish: 3, //[0, 4]
+        size: 2,  //[1,3]
         additionals: function () {
             return this.numChar - 1;
         }
@@ -970,15 +970,15 @@ const allImgs = [
         id: "1Wdy0_Zva9h33aJy8STeLSgEDL1sLFY_m",
 
         //gallery settings
-        name: "___",
-        descrip: "___",
-        bg: "___",
-        ratio: "TODO",
+        name: "Confused",
+        descrip: "",
+        bg: "green",
+        ratio: "291/437",
 
         //commision settings
-        numChar: 0,
-        finish: 0, //[0, 4]
-        size: 0,  //[1,3]
+        numChar: 1,
+        finish: 3, //[0, 4]
+        size: 2,  //[1,3]
         additionals: function () {
             return this.numChar - 1;
         }
@@ -989,15 +989,15 @@ const allImgs = [
         id: "1dTBkUsFAsMSGVCQAlS3rKufwQXGWEL_c",
 
         //gallery settings
-        name: "___",
-        descrip: "___",
-        bg: "___",
-        ratio: "TODO",
+        name: "Smile Prototype",
+        descrip: "the first version of character drawing, it was fixed before the rest were drawn.",
+        bg: "green",
+        ratio: "537/887",
 
         //commision settings
-        numChar: 0,
-        finish: 0, //[0, 4]
-        size: 0,  //[1,3]
+        numChar: 1,
+        finish: 3, //[0, 4]
+        size: 2,  //[1,3]
         additionals: function () {
             return this.numChar - 1;
         }
@@ -1008,15 +1008,15 @@ const allImgs = [
         id: "1oC3ll-DobFCZnXXPateH_VfMYQ7KCad0",
 
         //gallery settings
-        name: "___",
-        descrip: "___",
-        bg: "___",
-        ratio: "TODO",
+        name: "Moff",
+        descrip: "The second version of moth. ",
+        bg: "orange",
+        ratio: "1281/1286",
 
         //commision settings
-        numChar: 0,
-        finish: 0, //[0, 4]
-        size: 0,  //[1,3]
+        numChar: 1,
+        finish: 3, //[0, 4]
+        size: 3,  //[1,3]
         additionals: function () {
             return this.numChar - 1;
         }
@@ -1027,15 +1027,15 @@ const allImgs = [
         id: "1MchqX82u55JQtWOxnB0PqWodXRFTfYJM",
 
         //gallery settings
-        name: "___",
-        descrip: "___",
-        bg: "___",
-        ratio: "TODO",
+        name: "Left Facing",
+        descrip: "",
+        bg: "None",
+        ratio: "1/1",
 
         //commision settings
-        numChar: 0,
-        finish: 0, //[0, 4]
-        size: 0,  //[1,3]
+        numChar: 1,
+        finish: 2, //[0, 4]
+        size: 1,  //[1,3]
         additionals: function () {
             return this.numChar - 1;
         }
@@ -1046,15 +1046,15 @@ const allImgs = [
         id: "1xkZ9gyomuelUcZg3CdtVl87TXLhUaKba",
 
         //gallery settings
-        name: "___",
-        descrip: "___",
-        bg: "___",
-        ratio: "TODO",
+        name: "Gardevior",
+        descrip: "Another form.",
+        bg: "None",
+        ratio: "1221/1150",
 
         //commision settings
-        numChar: 0,
-        finish: 0, //[0, 4]
-        size: 0,  //[1,3]
+        numChar: 1,
+        finish: 3, //[0, 4]
+        size: 3,  //[1,3]
         additionals: function () {
             return this.numChar - 1;
         }
@@ -1065,15 +1065,15 @@ const allImgs = [
         id: "11oJekl8TjFYnZsOqy4aW2nKfyGFCPMnf",
 
         //gallery settings
-        name: "___",
-        descrip: "___",
-        bg: "___",
-        ratio: "TODO",
+        name: "Shiny Gardevior",
+        descrip: "Created a shiny versin to match. ",
+        bg: "None",
+        ratio: "4/3",
 
         //commision settings
-        numChar: 0,
-        finish: 0, //[0, 4]
-        size: 0,  //[1,3]
+        numChar: 1 ,
+        finish: 2, //[0, 4]
+        size: 3,  //[1,3]
         additionals: function () {
             return this.numChar - 1;
         }
@@ -1116,7 +1116,7 @@ const allImgs = [
 console.log(allImgs.length);
 var hey = document.getElementById("hey");
 v = "";
-for (i = 35; i < allImgs.length; i++) {
+for (i = 56; i < allImgs.length; i++) {//
     v += getDiv(i);
 }
 hey.innerHTML = v;

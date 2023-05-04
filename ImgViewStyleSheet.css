@@ -82,6 +82,15 @@ img.white {
 img{
     width:100%;
 }
+img.magenta{
+    background: radial-gradient(#C74D80, #63104e);
+}
+img.green{
+    background: radial-gradient(#F0F7D8, #B7EBAB);
+}
+img.orange{
+    background:radial-gradient(#FF893D, #FF7038);
+}
 
 /* OTHER IMG STUFF |======================================== */
 /*note this is only to be used for thumbnail displays*/
