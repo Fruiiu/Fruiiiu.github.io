@@ -1077,10 +1077,260 @@ const allImgs = [
         additionals: function () {
             return this.numChar - 1;
         }
+    },
+    {
+        //
+        //google access
+        id: "1we9qvQWWC7ljMWUUygZhbshzRA30ZKLH",
+
+        //gallery settings
+        name: "Mage",
+        descrip: "",
+        bg: "None",
+        ratio: "1/1",
+
+        //commision settings
+        numChar: 1,
+        finish: 3, //[0, 4]
+        size: 2,  //[1,3]
+        additionals: function () {
+            return this.numChar - 1;
+        }
+    },
+    {
+        //
+        //google access
+        id: "1x8vK8LlRb4FCr0xSf4zlriiOnVsvwU_m",
+
+        //gallery settings
+        name: "Stage 2",
+        descrip: "Evolved version of stage 1.",
+        bg: "None",
+        ratio: "3/4",
+
+        //commision settings
+        numChar: 1,
+        finish: 3, //[0, 4]
+        size: 3,  //[1,3]
+        additionals: function () {
+            return this.numChar - 1;
+        }
+    },
+    {
+        //
+        //google access
+        id: "1xFvVlWODcV92MNhsWYwbaBaQoRD2hMc-",
+
+        //gallery settings
+        name: "Stage 1",
+        descrip: "The unevolved version of the suit.",
+        bg: "None",
+        ratio: "3/4",
+
+        //commision settings
+        numChar: 1,
+        finish: 3, //[0, 4]
+        size: 3,  //[1,3]
+        additionals: function () {
+            return this.numChar - 1;
+        }
+    },
+    {
+        //
+        //google access
+        id: "1xSDInOFkiZdn4V8pthdgJy85mJyHwYhN",
+
+        //gallery settings
+        name: "Winter Breath",
+        descrip: "",
+        bg: "None",
+        ratio: "1/1",
+
+        //commision settings
+        numChar: 1,
+        finish: 3, //[0, 4]
+        size: 1,  //[1,3]
+        additionals: function () {
+            return this.numChar - 1;
+        }
+    },
+    {
+        //
+        //google access
+        id: "1x_px14R9J-46dXOlCe0dK1l5SUi9wYQ7",
+
+        //gallery settings
+        name: "Candy in a Glass",
+        descrip: "The version of the image without any effects added.",
+        bg: "None",
+        ratio: "1/1",
+
+        //commision settings
+        numChar: 1,
+        finish: 3, //[0, 4]
+        size: 3,  //[1,3]
+        additionals: function () {
+            return this.numChar - 1;
+        }
+    },
+    {
+        //
+        //google access
+        id: "1xatnX56XDsxW8sMncb2JQZnXnSgCsGR-",
+
+        //gallery settings
+        name: "Final Evolution",
+        descrip: "LN fan evolution fuit final stage. ",
+        bg: "None",
+        ratio: "3/4",
+
+        //commision settings
+        numChar: 1,
+        finish: 3, //[0, 4]
+        size: 3,  //[1,3]
+        additionals: function () {
+            return this.numChar - 1;
+        }
+    },
+    {
+        //
+        //google access
+        id: "1xc5Mt1OEc-ad0U1cgWE0OYdH9t78JMnU",
+
+        //gallery settings
+        name: "Winter Rabbit",
+        descrip: "",
+        bg: "None",
+        ratio: "1051/1073",
+
+        //commision settings
+        numChar: 1,
+        finish: 2, //[0, 4]
+        size: 1,  //[1,3]
+        additionals: function () {
+            return this.numChar - 1;
+        }
+    },
+    {
+        //
+        //google access
+        id: "1xcONeIxhhS6AGRl6z5gI-NuPs60jOaWh",
+
+        //gallery settings
+        name: "Braids Girl",
+        descrip: "",
+        bg: "None",
+        ratio: "1/1",
+
+        //commision settings
+        numChar: 1,
+        finish: 3, //[0, 4]
+        size: 1,  //[1,3]
+        additionals: function () {
+            return this.numChar - 1;
+        }
+    },
+    {
+        //
+        //google access
+        id: "1xm3Qhf429GiXpWztWmpHwDdAIIanXCmx",
+
+        //gallery settings
+        name: "Candy in a Glass (Lineart)",
+        descrip: "The lineart of the drawing. ",
+        bg: "None",
+        ratio: "1073/1244",
+
+        //commision settings
+        numChar: 1,
+        finish: 1, //[0, 4]
+        size: 3,  //[1,3]
+        additionals: function () {
+            return this.numChar - 1;
+        }
+    },
+    {
+        //
+        //google access
+        id: "1xsQ4cPfj4h2fYU7JqKQ2akdeY4aFEpFS",
+
+        //gallery settings
+        name: "Glazeling",
+        descrip: "Ealier version of the character. ",
+        bg: "None",
+        ratio: "1895/2067",
+
+        //commision settings
+        numChar: 1,
+        finish: 3, //[0, 4]
+        size: 3,  //[1,3]
+        additionals: function () {
+            return this.numChar - 1;
+        }
+    },
+    {
+        //
+        //google access
+        id: "1wDn21iEUzozZUPJwcZpl8wK5PaFZ4W1q",
+
+        //gallery settings
+        name: "Cyborg",
+        descrip: "___",
+        bg: "white",
+        ratio: "1/1",
+
+        //commision settings
+        numChar: 1,
+        finish: 2, //[0, 4]
+        size: 3,  //[1,3]
+        additionals: function () {
+            return this.numChar - 1;
+        }
+    },
+    {
+        //
+        //google access
+        id: "1xLwkLbgj38jbdQhE3kNJCNdmuynLHI69",
+
+        //gallery settings
+        name: "Cyborg (Lineart)",
+        descrip: "___",
+        bg: "white",
+        ratio: "1/1",
+
+        //commision settings
+        numChar: 1,
+        finish: 1, //[0, 4]
+        size: 3,  //[1,3]
+        additionals: function () {
+            return this.numChar - 1;
+        }
+    },
+    {
+        //
+        //google access
+        id: "16F0zLC1Znwcl1JTvJ520fiEomBCPxC-h",
+
+        //gallery settings
+        name: "Cyborg (sketch)",
+        descrip: "The reverse side was not completed in the sebsequent drawings.",
+        bg: "white",
+        ratio: "1/1",
+
+        //commision settings
+        numChar: 1,
+        finish: 0, //[0, 4]
+        size: 3,  //[1,3]
+        additionals: function () {
+            return this.numChar - 1;
+        }
     }
 
 
     /* 
+     * 
+     * 
+     * 
      * 
      * */
 
@@ -1116,28 +1366,53 @@ const allImgs = [
 console.log(allImgs.length);
 var hey = document.getElementById("hey");
 v = "";
-for (i = 56; i < allImgs.length; i++) {//
+for (i = 66; i < allImgs.length; i++) {//
     v += getDiv(i);
 }
 hey.innerHTML = v;
 
+/* paste into console for img ratio
+
+ let a = 0;
+let b = 0;
+let gcd = 0;
+
+for (i = 56; i < allImgs.length; i++) { //replace with starting index
+  let heyi = document.getElementById("i" + i);
+  a = heyi.naturalWidth;
+  b= heyi.naturalHeight;
+  
+  console.log(i, allImgs[i].name, simplify(a, b) );
+}
+
+ */ 
 
 
-
-//image sets, will be displayed in portfolio
+//image sets, will be displayed in portfolio (set up after gallery)
 const imgSets = [
     {
         tnIndex: 1, //index of thumbnail
-        imgsIndex: [1,2,3,4], //indexes of all images included
+        imgsIndex: [1, 63, 2,3,4], //indexes of all images included
 
         //only if more than 1 img contained
         name: "Soft Style",
-        descrip: "",
+        descrip: "Done on ibis paint using softer brushes. ",
+    },
+    {
+        tnIndex: 66, //index of thumbnail
+        imgsIndex: [66, 67, 68], //indexes of all images included
+
+        //only if more than 1 img contained
+        name: "Cybord Cat Person",
+        descrip: "Character design process of cyborg cat person. ",
     }
+
+
 
     /*copy and past to bottom, read from b to t
      
-         {
+    ,
+    {
         tnIndex: 0, //index of thumbnail
         imgsIndex: [0], //indexes of all images included
 
@@ -1187,7 +1462,14 @@ function getImgElement(i) {
     //gets the image element using index of 
     var img = getImg(i);
 
-    return '<img' + getImgID(i) + getClass(img) + getSRC(img) + getAlt(img) + getLazyLoad() +' /> ';
+    return '<img'
+        + getImgID(i)
+        + getTitle(i)
+        + getClass(img)
+        + getSRC(img)
+        + getAlt(img)
+        + getLazyLoad()
+        + ' /> ';
   
 
 }
@@ -1212,6 +1494,11 @@ function getAlt(img) {
 
 function getLazyLoad() {
     return ' loading = "lazy" ';
+
+}
+
+function getTitle(i) {
+    return ' title="' + i + '" '
 
 }
 
