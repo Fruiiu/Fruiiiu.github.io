@@ -1324,13 +1324,314 @@ const allImgs = [
         additionals: function () {
             return this.numChar - 1;
         }
+    },
+    {
+        //
+        //google access
+        id: "1oYEfB3ty8M8Idp3VhZYKgS2FuU05N51x",
+
+        //gallery settings
+        name: "Cabin",
+        descrip: "Colour addded through multiply.",
+        bg: "None",
+        ratio: "1",
+
+        //commision settings
+        numChar: 1,
+        finish: 4, //[0, 4]
+        size: 2,  //[1,3]
+        additionals: function () {
+            return this.numChar - 1;
+        }
+    },
+    {
+        //
+        //google access
+        id: "1HJGBIEShj1cgcfa34POY1GIaE79p-DMi",
+
+        //gallery settings
+        name: "Cabin (No Color)",
+        descrip: "Without colour addition.",
+        bg: "None",
+        ratio: "1",
+
+        //commision settings
+        numChar: 1,
+        finish: 4, //[0, 4]
+        size: 2,  //[1,3]
+        additionals: function () {
+            return this.numChar - 1;
+        }
+    },
+    {
+        //
+        //google access
+        id: "1B-jZ7SVVHXPuaJ0zlXzRSs90Xcy6en2J",
+
+        //gallery settings
+        name: "Cabin (3D model)",
+        descrip: "Blender 3D model render. No materials were used. ",
+        bg: "green",
+        ratio: "1",
+
+        //commision settings
+        numChar: 0,
+        finish: 4, //[0, 4]
+        size: 0,  //[1,3]
+        additionals: function () {
+            return this.numChar - 1;
+        }
+    },
+    {
+        //
+        //google access
+        id: "17XvbsYSjO8bkfzBwTf63GddFwY_KfuKq",
+
+        //gallery settings
+        name: "Cabin (sketch)",
+        descrip: "The initial sketch the model and painting was based on. ",
+        bg: "None",
+        ratio: "1",
+
+        //commision settings
+        numChar: 1,
+        finish: 0, //[0, 4]
+        size: 2,  //[1,3]
+        additionals: function () {
+            return this.numChar - 1;
+        }
+    },
+    {
+        //
+        //google access
+        id: "1lZaXg7FInVy4OgtlsJMYVzrdcxF_ytHR",
+
+        //gallery settings
+        name: "Glazelings Design and Thumbnails",
+        descrip: "Redesigning the glazelings.",
+        bg: "None",
+        ratio: "81/59",
+
+        //commision settings
+        numChar: 3,
+        finish: 2, //[0, 4]
+        size: 3,  //[1,3]
+        additionals: function () {
+            return this.numChar - 1;
+        }
+    },
+    {
+        //
+        //google access
+        id: "1qm-9-OA6XU1WuL1-o4cIhDmQOoGXLx6V",
+
+        //gallery settings
+        name: "Map of Caves (Bottom)",
+        descrip: "The bottom layer of the glass caves. ",
+        bg: "None",
+        ratio: "1",
+
+        //commision settings
+        numChar: 0,
+        finish: 0, //[0, 4]
+        size: 0,  //[1,3]
+        additionals: function () {
+            return this.numChar - 1;
+        }
+    },
+    {
+        //
+        //google access
+        id: "1Mvw03Gfp185c2UEkNEcw-ACayfnUnJnS",
+
+        //gallery settings
+        name: "Map of Caves (Top)",
+        descrip: "The upper layer of the glass caves",
+        bg: "None",
+        ratio: "1",
+
+        //commision settings
+        numChar: 0,
+        finish: 0, //[0, 4]
+        size: 0,  //[1,3]
+        additionals: function () {
+            return this.numChar - 1;
+        }
+    },
+    {
+        //
+        //google access
+        id: "1acL8ySn3NyhQEz44lWpnbBqybXUfG0qY",
+
+        //gallery settings
+        name: "Glass Caves",
+        descrip: "A view of the glass caves. ",
+        bg: "None",
+        ratio: "2048/1375",
+
+        //commision settings
+        numChar: 0,
+        finish: 4, //[0, 4]
+        size: 0,  //[1,3]
+        additionals: function () {
+            return this.numChar - 1;
+        }
+    },
+    {
+        //
+        //google access
+        id: "1Qz6J1H9dfR6WXXLZLWdFOJdUXiaXzMhA",
+
+        //gallery settings
+        name: "Trees",
+        descrip: "Initial design for glazelings and the glass caves, including the glass trees. ",
+        bg: "black",
+        ratio: "1",
+
+        //commision settings
+        numChar: 0,
+        finish: 4, //[0, 4]
+        size: 0,  //[1,3]
+        additionals: function () {
+            return this.numChar - 1;
+        }
+    },
+    {
+        //
+        //google access
+        id: "12P97M-ZxchS5VpGuyTkee51mcD9JpEZj",
+
+        //gallery settings
+        name: "Glazeling C",
+        descrip: "",
+        bg: "None",
+        ratio: "622/571",
+
+        //commision settings
+        numChar: 1,
+        finish: 3, //[0, 4]
+        size: 3,  //[1,3]
+        additionals: function () {
+            return this.numChar - 1;
+        }
+    },
+    {
+        //
+        //google access
+        id: "1Qwixn3uaLH1VwOdGXIc88ckH8XidlVa6",
+
+        //gallery settings
+        name: "Glazeling B",
+        descrip: "",
+        bg: "None",
+        ratio: "622/571",
+
+        //commision settings
+        numChar: 1,
+        finish: 2, //[0, 4]
+        size: 3,  //[1,3]
+        additionals: function () {
+            return this.numChar - 1;
+        }
+    },
+    {
+        //
+        //google access
+        id: "1luh9MuRu53G3HwhrHB_4BZIaM9kOSNtR",
+
+        //gallery settings
+        name: "Glazeling A",
+        descrip: "",
+        bg: "None",
+        ratio: "622/571",
+
+        //commision settings
+        numChar: 1,
+        finish: 2, //[0, 4]
+        size: 3,  //[1,3]
+        additionals: function () {
+            return this.numChar - 1;
+        }
+    },
+    {
+        //
+        //google access
+        id: "1R3Ph6ybSYopLBQNSdgeJuYxYqvj8m_5D",
+
+        //gallery settings
+        name: "Character Designs",
+        descrip: "Their precious eyes. ",
+        bg: "None",
+        ratio: "4/3",
+
+        //commision settings
+        numChar: 6,
+        finish: 3, //[0, 4]
+        size: 3,  //[1,3]
+        additionals: function () {
+            return this.numChar - 1;
+        }
+    },
+    {
+        //
+        //google access
+        id: "1XDsxF6HTy2lp8dG0vXAJgVDDECGsIGdj",
+
+        //gallery settings
+        name: "Sky Eels",
+        descrip: "They fly towards other landmasses. ",
+        bg: "None",
+        ratio: "1",
+
+        //commision settings
+        numChar: 1,
+        finish: 4, //[0, 4]
+        size: 2,  //[1,3]
+        additionals: function () {
+            return this.numChar - 1;
+        }
+    },
+    {
+        //
+        //google access
+        id: "1zZEEd-Wobx2AmgrDn7UV3NG251GnaPUZ",
+
+        //gallery settings
+        name: "Guard",
+        descrip: "Character design and testing out uniforms. ",
+        bg: "green",
+        ratio: "1",
+
+        //commision settings
+        numChar: 1,
+        finish: 3, //[0, 4]
+        size: 3,  //[1,3]
+        additionals: function () {
+            return this.numChar - 1;
+        }
+    },
+    {
+        //
+        //google access
+        id: "1_CyLNJHU48BVmsaaXkdMX3uUOMsV3Vzo",
+
+        //gallery settings
+        name: "Owner of the Seas",
+        descrip: "",
+        bg: "black",
+        ratio: "1",
+
+        //commision settings
+        numChar: 1,
+        finish: 3, //[0, 4]
+        size: 3,  //[1,3]
+        additionals: function () {
+            return this.numChar - 1;
+        }
     }
 
 
     /* 
-     * 
-     * 
-     * 
      * 
      * */
 
@@ -1366,7 +1667,7 @@ const allImgs = [
 console.log(allImgs.length);
 var hey = document.getElementById("hey");
 v = "";
-for (i = 66; i < allImgs.length; i++) {//
+for (i = 84; i < allImgs.length; i++) {//
     v += getDiv(i);
 }
 hey.innerHTML = v;
@@ -1405,7 +1706,31 @@ const imgSets = [
         //only if more than 1 img contained
         name: "Cybord Cat Person",
         descrip: "Character design process of cyborg cat person. ",
-    }
+    },
+    {
+        tnIndex: 69, //index of thumbnail
+        imgsIndex: [69, 70, 71, 72], //indexes of all images included
+
+        //only if more than 1 img contained
+        name: "",
+        descrip: "",
+    },
+    {
+        tnIndex: 76, //index of thumbnail
+        imgsIndex: [76, 75, 74, 73, 77], //indexes of all images included
+
+        //only if more than 1 img contained
+        name: "The Glass Caves",
+        descrip: "Designs for the world inside the glass caves. ",
+    },
+    {
+        tnIndex: 78, //index of thumbnail
+        imgsIndex: [78, 79, 80], //indexes of all images included
+
+        //only if more than 1 img contained
+        name: "Glazelings",
+        descrip: "Changing the characters so they are more colourful. ",
+    } // todo 81 - 84 seperate images
 
 
 
@@ -1417,8 +1742,8 @@ const imgSets = [
         imgsIndex: [0], //indexes of all images included
 
         //only if more than 1 img contained
-        name: "...",
-        descrip: "...",
+        name: "___",
+        descrip: "___",
     }
      
      */ 
