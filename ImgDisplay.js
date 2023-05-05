@@ -1,4 +1,10 @@
+//==============================| Elements |=======================================
+var gallery = document.getElementById('gallery');
+const modals = document.getElementsByClassName("modal");
+let height = 200;
+
 /* =========================| Images |========================= */
+
 
 //function for creating google docs path
 function getGooglePath(id) {
@@ -19,7 +25,6 @@ function getDivStyle(s) {
     return ' style="' + s + '" ';
 
 }
-
 function getDivAspect(i) {
     //where i is the index of the img in allimgs
     //aspect-ratio:1/1;
@@ -40,7 +45,6 @@ function getImgElement(i) {
         + getLazyLoad()
         + ' /> ';
 
-
 }
 
 function getImg(i) {
@@ -52,31 +56,70 @@ function getClass(img) {
     return ' class = "' + img.bg + '" ';
 
 }
-
 function getSRC(img) {
     return ' src = "' + getGooglePath(img.id) + '" ';
 }
-
 function getAlt(img) {
     return ' alt = "' + img.name + '" ';
 }
-
 function getLazyLoad() {
     return ' loading = "lazy" ';
 
 }
-
 function getTitle(i) {
     return ' title="' + i + '" '
 
 }
-
 function getImgID(i) { //where i is the image index in allimg
     return ' id = "i' + i + '" ';
 }
 
 //function for creating gallery inside layout
-
+function setGallerySomeImgs(a, b) {
+    gallery.innerHTML = '';
+    for (i = b; i >= a; i--) {
+        gallery.innerHTML += getImgGalleryDiv(i);
+    }
+}function setGalleryAllImgs() {
+    gallery.innerHTML = '';
+    for (i = allImgs.length-1; i >= 0 ; i--) {
+        gallery.innerHTML += getImgGalleryDiv(i);
+    }
+}
+function getImgGalleryDiv(i) {
+    //where i is the stack number
+    let front = '<div class="imgframe"' + getFrameStyle(i) + '><div class="imgcont">';
+    let mid = '</div>';
+    let back = '</div>';
+    return front + getDiv(i) + mid + back;
+}
+function getStackGalleryDiv(si) {
+    //where i is the stack number
+    let front = '<div class="imgframe"><div class="imgcont">';
+    let mid = '</div>';
+    let back = '</div>';
+    return front + getDiv(si) + mid + getStackInd(si) + back;
+}
+function getFrameStyle(i) {
+    return ' style="width:' + getWidth(i) + 'px" ';
+}
+function getStackInd(si) {
+    if (imgSets[si].imgsIndex.length == 1) {
+        return '';
+    }
+    else {
+        return '<div class="stackind"></div>';
+    }
+}
+function getWidth(i) {
+    let a = ratioToInts(i);
+    return height * (a[0] / a[1]);
+}
+function ratioToInts(i) {
+    s = getImg(i).ratio;
+    a = s.split('/');
+    return [Number(a[0]), Number(a[1])];
+}
 
 //this is what to do, backslashes do not affect it yay
 
@@ -112,7 +155,6 @@ function findGCD(a, b) {
 
     return d;
 }
-
 function simplify(a, b) {
     //this does not return backlashes for easy manual pasting
     let gcd = findGCD(a, b);
@@ -121,6 +163,7 @@ function simplify(a, b) {
     return " " + a + "_" + b + " ";
 }
 
+//===================|modals|=======================================
 //modal code, make sure you only have 1 modal
 /** example modal html
  
@@ -138,9 +181,6 @@ function simplify(a, b) {
  
  */
 
-
-const modals = document.getElementsByClassName("modal");
-
 function closeModal() {
     for (i = 0; i < modals.length; i++) {
         modals[i].style.display = 'none';
@@ -153,3 +193,4 @@ function openModal() {
     }
 }
 
+setGalleryAllImgs();
