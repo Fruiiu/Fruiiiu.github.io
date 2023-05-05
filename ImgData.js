@@ -1972,7 +1972,6 @@ const allImgs = [
         }
     },
     {
-        //
         //google access
         id: "1Mfs5Ici3zEu2RmguLJWzkjMnCHd9TXqK",
 
@@ -1989,31 +1988,232 @@ const allImgs = [
         additionals: function () {
             return this.numChar - 1;
         }
+    },
+    {
+        //google access
+        id: "1_87-B4Oma8V3IN7oWHejgI8ZIUYCRlwz",
+
+        //gallery settings
+        name: "DTIYS",
+        descrip: 'A draw this in your style entry for <a href="https://www.instagram.com/peachy_gore/">@peachy_gore</a>.',
+        bg: "None",
+        ratio: "1",
+
+        //commision settings
+        numChar: 1,
+        finish: 4, //[0, 4]
+        size: 3,  //[1,3]
+        additionals: function () {
+            return this.numChar - 1;
+        }
+    },
+    {
+        //google access
+        id: "1cs-9ZOZcLxo4pNenq5fvoZdx_M8FqKDQ",
+
+        //gallery settings
+        name: "Potions",
+        descrip: "",
+        bg: "None",
+        ratio: "1",
+
+        //commision settings
+        numChar: 1,
+        finish: 4, //[0, 4]
+        size: 3,  //[1,3]
+        additionals: function () {
+            return this.numChar - 1;
+        }
+    },
+    {
+        //google access
+        id: "1TM6NqjeUXZVbbbXEBfTEwch6hsKt7a_M",
+
+        //gallery settings
+        name: "Light Krill",
+        descrip: "Fannart for sky:children of the light. Inspired by roadside vines. ",
+        bg: "None",
+        ratio: "144/119",
+
+        //commision settings
+        numChar: 2,
+        finish: 4, //[0, 4]
+        size: 3,  //[1,3]
+        additionals: function () {
+            return this.numChar - 1;
+        }
+    },
+    {
+        //google access
+        id: "1Lqw9sNX-k4tFx7EfN0cIL9EPAmHYSyp3",
+
+        //gallery settings
+        name: "Infected",
+        descrip: "",
+        bg: "None",
+        ratio: "72/89",
+
+        //commision settings
+        numChar: 1,
+        finish: 3, //[0, 4]
+        size: 2,  //[1,3]
+        additionals: function () {
+            return this.numChar - 1;
+        }
+    },
+    {
+        //google access
+        id: "1vfPR8_yKTOA49UaotNWoNQo0BGxcZkI5",
+
+        //gallery settings
+        name: "Mourning Flowers",
+        descrip: "Aspects of this character were re-incorporated into another design. ",
+        bg: "None",
+        ratio: "1",
+
+        //commision settings
+        numChar: 1,
+        finish: 4, //[0, 4]
+        size: 3,  //[1,3]
+        additionals: function () {
+            return this.numChar - 1;
+        }
+    },
+    {
+        //google access
+        id: "1ZEFzuo1rLQMnrHll2D_QK_Zgd06jNwRY",
+
+        //gallery settings
+        name: "Armour",
+        descrip: "Early design for one of the glazlings.",
+        bg: "None",
+        ratio: "4/5",
+
+        //commision settings
+        numChar: 1,
+        finish: 4, //[0, 4]
+        size: 3,  //[1,3]
+        additionals: function () {
+            return this.numChar - 1;
+        }
+    },
+    {
+        //google access
+        id: "1xAz81kO5qZhUvGxqDQzIo2psL9AUprtm",
+
+        //gallery settings
+        name: "Soul Stuck",
+        descrip: "Rip out the invader.",
+        bg: "None",
+        ratio: "4/5",
+
+        //commision settings
+        numChar: 1,
+        finish: 3, //[0, 4]
+        size: 3,  //[1,3]
+        additionals: function () {
+            return this.numChar - 1;
+        }
+    },
+    {
+        //google access
+        id: "13ojyvGsVpQV1QlavMV7zH0caQiU5B6jO",
+
+        //gallery settings
+        name: "Soul Stuck Lineart",
+        descrip: "This was a fun style to do. ",
+        bg: "None",
+        ratio: "4/5",
+
+        //commision settings
+        numChar: 1,
+        finish: 3, //[0, 4]
+        size: 3,  //[1,3]
+        additionals: function () {
+            return this.numChar - 1;
+        }
+    },
+    {
+        //google access
+        id: "1yY2_Nas3hJSKkssgY-eHQyOo_XWSG-Me",
+
+        //gallery settings
+        name: "Reaper Fannart",
+        descrip: 'Draw your reaper from <a href="https://www.instagram.com/grave_weaver/">@grave_weaver</a>.',
+        bg: "None",
+        ratio: "1",
+
+        //commision settings
+        numChar: 1,
+        finish: 3, //[0, 4]
+        size: 3,  //[1,3]
+        additionals: function () {
+            return this.numChar - 1;
+        }
+    },
+    {
+        //google access
+        id: "1ZgiVC3TAu84S8poB-HWODlBBGj0QXfzY",
+
+        //gallery settings
+        name: "Swan DTIYS",
+        descrip: ' Original post from <a href="https://www.instagram.com/janegumball/"> @janegumball</a>.',
+        bg: "None",
+        ratio: "1440/1489",
+
+        //commision settings
+        numChar: 1,
+        finish: 4, //[0, 4]
+        size: 3,  //[1,3]
+        additionals: function () {
+            return this.numChar - 1;
+        }
+    },
+    {
+        //google access
+        id: "1tJUmjvITz_8H3e4I8_rNh59ic-XPaGhT",
+
+        //gallery settings
+        name: "Circus",
+        descrip: "They are really off-model. ",
+        bg: "None",
+        ratio: "4/5",
+
+        //commision settings
+        numChar: 2,
+        finish: 4, //[0, 4]
+        size: 3,  //[1,3]
+        additionals: function () {
+            return this.numChar - 1;
+        }
+    },
+    {
+        //google access
+        id: "1rNHSRyGsakLd7VeLqx4npfxnVj74MMQP",
+
+        //gallery settings
+        name: "Swamp",
+        descrip: "Good luck getting out of here.",
+        bg: "None",
+        ratio: "4/3",
+
+        //commision settings
+        numChar: 0,
+        finish: 4, //[0, 4]
+        size: 0,  //[1,3]
+        additionals: function () {
+            return this.numChar - 1;
+        }
     }
 
 
     /* 
-     * 1_87-B4Oma8V3IN7oWHejgI8ZIUYCRlwz
-     * 1cs-9ZOZcLxo4pNenq5fvoZdx_M8FqKDQ
-     * 1TM6NqjeUXZVbbbXEBfTEwch6hsKt7a_M
-     * 1Lqw9sNX-k4tFx7EfN0cIL9EPAmHYSyp3
-     * 1vfPR8_yKTOA49UaotNWoNQo0BGxcZkI5
-     * 1ZEFzuo1rLQMnrHll2D_QK_Zgd06jNwRY
-     * 1xAz81kO5qZhUvGxqDQzIo2psL9AUprtm
-     * 13ojyvGsVpQV1QlavMV7zH0caQiU5B6jO
-     * 1yY2_Nas3hJSKkssgY-eHQyOo_XWSG-Me
-     * 1ZgiVC3TAu84S8poB-HWODlBBGj0QXfzY
-     * 1tJUmjvITz_8H3e4I8_rNh59ic-XPaGhT
-     * 1rNHSRyGsakLd7VeLqx4npfxnVj74MMQP
-     * 
-     * 
      * */
 
     //image objects. copy and paste below and add to bottom of list
     /*
      ,
     {
-        //
         //google access
         id: "",
 
@@ -2048,13 +2248,13 @@ for (i = 85; i < allImgs.length; i++) {//
 hey.innerHTML = v;
  
  */ 
-/* paste into console for img ratio
+/* paste into console for img ratio, img element must be valid
 
  let a = 0;
 let b = 0;
 let gcd = 0;
 
-for (i = 56; i < allImgs.length; i++) { //replace with starting index
+for (i = 104; i < allImgs.length; i++) { //replace with starting index
   let heyi = document.getElementById("i" + i);
   a = heyi.naturalWidth;
   b= heyi.naturalHeight;

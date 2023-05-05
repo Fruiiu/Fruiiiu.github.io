@@ -194,3 +194,7 @@ function openModal() {
 }
 
 setGalleryAllImgs();
+//var hey = document.getElementById('hey');
+//for (i = 104; i < allImgs.length; i++) {
+//    hey.innerHTML += getDiv(i);
+//}
