@@ -9,7 +9,7 @@
 /* MODALS |==========================================*/
 .modal {
     /* toggle block to none */
-    display: block;
+    display: none;
     z-index: 6; /*3 is taken by top elements*/
     /*positioning*/
     position: fixed; /* Stay in place */
@@ -43,7 +43,7 @@
     right:10px;
 }
 .close>p {
-    font-size: 28px;
+    font-size: 34px;
     font-weight: bolder;
     margin-left:20px;
     margin-right:20px;
@@ -51,7 +51,7 @@
     margin-bottom:10px;
 
     color:black;
-    opacity:0.6;
+    opacity:0.3;
     transition:0.2s;
 }
 
@@ -59,7 +59,7 @@
     .close>p:focus {
         color: black;
         opacity:0.9;
-        font-size:30px;
+        font-size:38px;
     }
 
 /* IMG DISPLAYS |============================================== */
@@ -95,7 +95,7 @@ img.black{
     background:radial-gradient(#000000, #001B28);
 }
 img.blue{
-    background:radial-gradient(#379CC5, #254379);
+    background:radial-gradient(#94CCE4, #374C7D);
 }
 
 /* OTHER IMG STUFF |======================================== */

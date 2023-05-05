@@ -1951,10 +1951,50 @@ const allImgs = [
         additionals: function () {
             return this.numChar - 1;
         }
+    },
+    {
+        //
+        //google access
+        id: "1UfYN6fokOoLuoNaa2PE-iyHM44E0vv4e",
+
+        //gallery settings
+        name: "Normal Attacks",
+        descrip: "Rough animation of Marianna's normal attacks. ",
+        bg: "None",
+        ratio: "1241/784",
+
+        //commision settings
+        numChar: 0,
+        finish: 0, //[0, 4]
+        size: 0,  //[1,3]
+        additionals: function () {
+            return this.numChar - 1;
+        }
+    },
+    {
+        //
+        //google access
+        id: "1Mfs5Ici3zEu2RmguLJWzkjMnCHd9TXqK",
+
+        //gallery settings
+        name: "Charged Attack",
+        descrip: "Rough animation of Marianna's charged attacks. ",
+        bg: "None",
+        ratio: "1241/784",
+
+        //commision settings
+        numChar: 0,
+        finish: 0, //[0, 4]
+        size: 0,  //[1,3]
+        additionals: function () {
+            return this.numChar - 1;
+        }
     }
 
 
     /* 
+     * 
+     * 
      * 
      * */
 
@@ -1986,14 +2026,17 @@ const allImgs = [
 
 ];
 //testing
-
-console.log(allImgs.length);
+/*
+ console.log(allImgs.length);
 var hey = document.getElementById("hey");
 v = "";
 for (i = 85; i < allImgs.length; i++) {//
     v += getDiv(i);
 }
 hey.innerHTML = v;
+ 
+ */ 
+
 
 /* paste into console for img ratio
 
@@ -2081,8 +2124,6 @@ function getGooglePath(id) {
     //id rrefers to the long string after the google share thing
     return "https://drive.google.com/uc?id=" + id;
 }
-//console.log(getGooglePath("188QjvW06eDdlZjhWN3du4Njqg6FshEq-"));
-
 
 
 //function for creating exanded display layout
