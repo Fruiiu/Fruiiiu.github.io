@@ -7,6 +7,11 @@
     color:white;
 }
 
+body{
+    height:100%;
+    overflow:scroll;
+}
+
 .gallery{
     display:flex;
     flex-direction:row-reverse;
@@ -105,7 +110,7 @@ img.blue{
 /*note this is only to be used for thumbnail displays*/
 .imgframe{
     position:relative;
-    height:200px;
+    height:400px;
     width:auto;
 }
 

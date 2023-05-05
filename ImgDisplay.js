@@ -2,7 +2,9 @@
 var gallery = document.getElementById('gallery');
 const modals = document.getElementsByClassName("modal");
 const mcont = document.getElementById('mcont');
-let height = 200;
+let height = 400;
+setHeight();
+let modalOpen = false;
 
 /* =========================| Images |========================= */
 function getImg(i) {
@@ -19,7 +21,13 @@ function getGooglePath(id) {
     return "https://drive.google.com/uc?id=" + id;
 }
 
-
+function setHeight() { //can call any time
+    document.head.innerHTML += '<style> .imgframe {height:' + height + 'px;}</style>';
+}
+function changeHeight(i) {
+    height = i;
+    setHeight();
+}
 
 //function for creating exanded display layout
 
@@ -27,7 +35,7 @@ function getGooglePath(id) {
 function getSetDiv(si) {
     let i = getSet(si).tnIndex;
     //for sets, do not use inside modal
-    return '<div class="test" ' + getDivStyle(getDivAspect(i)) + ' > ' + getImgElement(i) + ' </div>';
+    return '<div class="test" ' + getDivStyle(getDivAspect(i)) + ' > ' + getSetElement(si) + ' </div>';
 }
 
 function getImgDiv(i) {
@@ -53,7 +61,22 @@ function getImgElement(i) {
 
     return '<img'
         + getImgID(i)
-        + getTitle(i)
+        + getTitleImg(i)
+        + getClass(img)
+        + getSRC(img)
+        + getAlt(img)
+        + getLazyLoad()
+        + ' /> ';
+
+}
+function getSetElement(si) {
+    //gets the image element using index of 
+    var i = getSet(si).tnIndex;
+    var img = getImg(i);
+
+    return '<img'
+        + getImgID(i)
+        + getTitleSet(si)
         + getClass(img)
         + getSRC(img)
         + getAlt(img)
@@ -76,8 +99,12 @@ function getLazyLoad() {
     return ' loading = "lazy" ';
 
 }
-function getTitle(i) {
-    return ' title="' + i + '" '
+function getTitleImg(i) {
+    return ' title="i_' + i + '" '
+
+}
+function getTitleSet(i) {
+    return ' title="s_' + i + '" '
 
 }
 function getImgID(i) { //where i is the image index in allimg
@@ -90,7 +117,8 @@ function setGallerySomeImgs(a, b) {
     for (i = b; i >= a; i--) {
         gallery.innerHTML += getImgGalleryDiv(i);
     }
-}function setGalleryAllImgs() {
+}
+function setGalleryAllImgs() {
     gallery.innerHTML = '';
     for (i = allImgs.length-1; i >= 0 ; i--) {
         gallery.innerHTML += getImgGalleryDiv(i);
@@ -221,25 +249,26 @@ function closeModal() {
     for (i = 0; i < modals.length; i++) {
         modals[i].style.display = 'none';
     }
+    modalOpen = false;
+    console.log('modal Opened:' + modalOpen);
+    setScroll();
 }
 
 function openModal() {
     for (i = 0; i < modals.length; i++) {
         modals[i].style.display = 'block';
     }
+    modalOpen = true;
+    console.log('modal Opened:' + modalOpen);
+    setScroll();
 }
 function openModalSet(si) {
-    for (i = 0; i < modals.length; i++) {
-        modals[i].style.display = 'block';
-    }
+    openModal();
     mcont.innerHTML = getModalSet(si);
 }
 function openModalImg(i) {
     //console.log('img requested:' + i);
-
-    for (j = 0; j < modals.length; j++) {
-        modals[j].style.display = 'block';
-    }
+    openModal();
     mcont.innerHTML = getModalImage(i);
 }
 
@@ -277,10 +306,16 @@ function getModalImage(i) {
     return name + getImgDiv(i) + descrip;
 
 }
-
+function setScroll() {
+    if (modalOpen == true) {
+        document.body.style.overflow = 'hidden';
+    }
+    else {
+        document.body.style.overflow = 'scroll';
+    }
+}
 //setGalleryAllImgs();
 
-let vore = '';
 
 
-setGallerySomeImgs(80, 90);
+setGallerySomeImgs(78, 84);

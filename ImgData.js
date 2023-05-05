@@ -1066,7 +1066,7 @@ const allImgs = [
 
         //gallery settings
         name: "Shiny Gardevior",
-        descrip: "Created a shiny versin to match. ",
+        descrip: "Created a shiny version to match. ",
         bg: "None",
         ratio: "4/3",
 
