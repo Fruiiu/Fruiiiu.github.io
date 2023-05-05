@@ -1,12 +1,45 @@
-//==============================| Elements |=======================================
+//==================| Elements & Vars |====================================================
+
+//the stuff |-----------------------------------------------------
 var gallery = document.getElementById('gallery');
 const modals = document.getElementsByClassName("modal");
 const mcont = document.getElementById('mcont');
 let height = 400;
 setHeight();
 let modalOpen = false;
+let inGallery = true;
 
-/* =========================| Images |========================= */
+//functions for this stuff |-----------------------------------------------------
+function setHeight() { //can call any time
+    document.head.innerHTML += '<style> .imgframe {height:' + height + 'px;}</style>';
+}
+function changeHeight(i) {
+    height = i;
+    setHeight();
+}
+
+function changeInGallery(b) {
+    inGallery = b;
+}
+
+function setScroll() {
+    if (modalOpen == true) {
+        document.body.style.overflow = 'hidden';
+    }
+    else {
+        document.body.style.overflow = 'scroll';
+    }
+}
+
+function setGallery(s) {
+    gallery.innerHTML = s;
+}
+function addGallery(s) {
+    setGallery(gallery.innerHTML + s);
+}
+
+/* =========================| Images |======================================================== */
+//basic reference functions
 function getImg(i) {
     //returns the image object for i (index)
     return allImgs[i];
@@ -21,20 +54,12 @@ function getGooglePath(id) {
     return "https://drive.google.com/uc?id=" + id;
 }
 
-function setHeight() { //can call any time
-    document.head.innerHTML += '<style> .imgframe {height:' + height + 'px;}</style>';
-}
-function changeHeight(i) {
-    height = i;
-    setHeight();
-}
 
-//function for creating exanded display layout
 
-//creating img backgorund and container
+//inner display (for modals and inside of thumbnails)
 function getSetDiv(si) {
     let i = getSet(si).tnIndex;
-    //for sets, do not use inside modal
+    //for set thumbnails, do not use inside modal
     return '<div class="test" ' + getDivStyle(getDivAspect(i)) + ' > ' + getSetElement(si) + ' </div>';
 }
 
@@ -75,7 +100,7 @@ function getSetElement(si) {
     var img = getImg(i);
 
     return '<img'
-        + getImgID(i)
+        + getSetID(i)
         + getTitleSet(si)
         + getClass(img)
         + getSRC(img)
@@ -99,39 +124,34 @@ function getLazyLoad() {
     return ' loading = "lazy" ';
 
 }
+
 function getTitleImg(i) {
-    return ' title="i_' + i + '" '
-
+    if (inGallery) {
+        return ' title="i' + i + '" '
+    }
+    else {
+        return '';
+    }
 }
-function getTitleSet(i) {
-    return ' title="s_' + i + '" '
-
+function getTitleSet(si) {
+    if (inGallery) {
+        return ' title="s' + si + '" '
+    }
+    else {
+        return '';
+    }
 }
-function getImgID(i) { //where i is the image index in allimg
+
+function getImgID(i) {
+    //where i is the image index in allimg
     return ' id = "i' + i + '" ';
 }
-
-//function for creating gallery inside layout
-function setGallerySomeImgs(a, b) {
-    gallery.innerHTML = '';
-    for (i = b; i >= a; i--) {
-        gallery.innerHTML += getImgGalleryDiv(i);
-    }
-}
-function setGalleryAllImgs() {
-    gallery.innerHTML = '';
-    for (i = allImgs.length-1; i >= 0 ; i--) {
-        gallery.innerHTML += getImgGalleryDiv(i);
-    }
+function getSetID(si) {
+    //where si is the set index in imgsets
+    return ' id = "s' + si + '" ';
 }
 
-function setGalleryAllSets() {
-    for (si = 0; si < imgSets.length; si++) {
-        vore += getStackGalleryDiv(si);
-    }
-    gallery.innerHTML = vore;
-}
-
+//outer display for thumbnails
 
 function getImgGalleryDiv(i) {
     //where i is the stack number
@@ -154,7 +174,6 @@ function getActionStack(si) {
     return ' onclick=" openModalSet( ' + si + ')" ';
 }
 
-
 function getFrameStyle(i) {
     //sets the frame style to be the right width for gallery
     //add here for more styles
@@ -169,6 +188,28 @@ function getStackInd(si) {
     else {
         return '<div class="stackind"></div>';
     }
+}
+
+//quick sets - one type
+function setGallerySomeImgs(a, b) {
+    gallery.innerHTML = '';
+    for (i = b; i >= a; i--) {
+        addGallery(getImgGalleryDiv(i));
+    }
+}
+function setGalleryAllImgs() {
+    gallery.innerHTML = '';
+    for (i = allImgs.length-1; i >= 0 ; i--) {
+        addGallery(getImgGalleryDiv(i));
+    }
+}
+
+function setGalleryAllSets() {
+    vore = '';
+    for (si = 0; si < imgSets.length; si++) {
+        vore += getStackGalleryDiv(si);
+    }
+    gallery.innerHTML = vore;
 }
 
 
@@ -306,16 +347,61 @@ function getModalImage(i) {
     return name + getImgDiv(i) + descrip;
 
 }
-function setScroll() {
-    if (modalOpen == true) {
-        document.body.style.overflow = 'hidden';
-    }
-    else {
-        document.body.style.overflow = 'scroll';
-    }
-}
-//setGalleryAllImgs();
-
 
 
 setGallerySomeImgs(78, 84);
+
+//===================| Img set processes |========================================================================================
+function Range(a, b) {
+    //creates list of integers from a to b-1
+    const ar = [];
+    for (i = a; i < b; i++) {
+        ar.push(i);
+    }
+    return ar;
+}
+
+//img lists - i# and s# - read and output as gallery
+function readListString(los) {
+    let final = '';
+    let num = -1;
+    let s = 'not';
+
+    for (i = 0; i < los.length; i++) {
+        s = los[i];
+
+        if (s.includes('s')) {
+            num = Number(s.slice(1, s.length));
+            final += getStackGalleryDiv(num);
+        }
+        else if (s.includes('i')) {
+            num = Number(s.slice(1, s.length));
+            final += getImgGalleryDiv(num);
+        }
+    }
+
+    return final;
+}
+
+function readListObject(los) {
+    const loo = [];
+    let num = -1;
+    let s = 'not';
+
+    for (i = 0; i < los.length; i++) {
+        s = los[i];
+
+        if (s.includes('s')) {
+            num = Number(s.slice(1, s.length));
+            loo.push(getSet(num));
+        }
+        else if (s.includes('i')) {
+            num = Number(s.slice(1, s.length));
+            loo.push(getImg(num));
+        }
+    }
+
+    return loo;
+}
+
+console.log(readListObject(['s3', 'i88', 'i78']));
