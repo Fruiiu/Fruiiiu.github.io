@@ -21,7 +21,7 @@ const allImgs = [
 
         //portfolio and gallery settings
         name: "Snom Animation",
-        descrip: "Snom animation from pokemon, first 'image' uploaded to the allImgs list.",
+        descrip: "Snom animation from pokemon, first 'image' uploaded to the allImgs list. Snom says if you see it in the modal with an irrelevant title its likely because the stack indecies were not specified. ",
         bg: "none",
         ratio: "4/3",
 
@@ -173,7 +173,7 @@ const allImgs = [
 
         //gallery settings
         name: "Candy in a Glass",
-        descrip: "Styling her was very fun.",
+        descrip: "Version after effects.",
         bg: "None",
         ratio: "1/1",
 
@@ -1326,7 +1326,7 @@ const allImgs = [
         }
     },
     {
-        //
+        //missing
         //google access
         id: "1oYEfB3ty8M8Idp3VhZYKgS2FuU05N51x",
 
@@ -1345,7 +1345,7 @@ const allImgs = [
         }
     },
     {
-        //
+        //missing
         //google access
         id: "1HJGBIEShj1cgcfa34POY1GIaE79p-DMi",
 
@@ -1364,7 +1364,7 @@ const allImgs = [
         }
     },
     {
-        //
+        //missing
         //google access
         id: "1B-jZ7SVVHXPuaJ0zlXzRSs90Xcy6en2J",
 
@@ -1383,7 +1383,7 @@ const allImgs = [
         }
     },
     {
-        //
+        //missing
         //google access
         id: "17XvbsYSjO8bkfzBwTf63GddFwY_KfuKq",
 
@@ -1421,7 +1421,7 @@ const allImgs = [
         }
     },
     {
-        //
+        //missing
         //google access
         id: "1qm-9-OA6XU1WuL1-o4cIhDmQOoGXLx6V",
 
@@ -1440,7 +1440,7 @@ const allImgs = [
         }
     },
     {
-        //
+        //missing
         //google access
         id: "1Mvw03Gfp185c2UEkNEcw-ACayfnUnJnS",
 
@@ -1478,7 +1478,7 @@ const allImgs = [
         }
     },
     {
-        //
+        //missing
         //google access
         id: "1Qz6J1H9dfR6WXXLZLWdFOJdUXiaXzMhA",
 
@@ -2085,7 +2085,7 @@ const allImgs = [
 
         //gallery settings
         name: "Armour",
-        descrip: "Early design for one of the glazlings.",
+        descrip: "Early design for one of the glazelings.",
         bg: "None",
         ratio: "4/5",
 
@@ -2276,6 +2276,70 @@ const imgSets = [
         descrip: "Done on ibis paint using softer brushes. ",
     },
     {
+        tnIndex: 14, //index of thumbnail
+        imgsIndex: [14, 9, 10, 11, 12, 13 ], //indexes of all images included
+
+        //only if more than 1 img contained
+        name: "Planets",
+        descrip: "The lineart was done on paper, the colours were added in ibis paint. ",
+    },
+    {
+        tnIndex: 20, //index of thumbnail
+        imgsIndex: [20, 15, 19, 18], //indexes of all images included
+
+        //only if more than 1 img contained
+        name: "Spirits",
+        descrip: "Drawn for a RPG.",
+    },
+    {
+        tnIndex: 22, //index of thumbnail
+        imgsIndex: [16, 22, 21], //indexes of all images included
+
+        //only if more than 1 img contained
+        name: "Auto Colour",
+        descrip: "The colours were added using ibis's auto-colour feature. ",
+    },
+    {
+        tnIndex: 29, //index of thumbnail
+        imgsIndex: [29, 30, 31, 28], //indexes of all images included
+
+        //only if more than 1 img contained
+        name: "LN Fan Suit Design",
+        descrip: "",
+    },
+    {
+        tnIndex: 43, //index of thumbnail
+        imgsIndex: [51, 43, 44, 45, 46, 47, 48, 49, 50], //indexes of all images included
+
+        //only if more than 1 img contained
+        name: "Sprite",
+        descrip: "Character expressions done for a friend. ",
+    },
+    {
+        tnIndex: 54, //index of thumbnail
+        imgsIndex: [54, 55], //indexes of all images included
+
+        //only if more than 1 img contained
+        name: "Gardevoirs",
+        descrip: "Making new gardevior designs for fun. ",
+    },
+    {
+        tnIndex: 61, //index of thumbnail
+        imgsIndex: [58, 57, 61], //indexes of all images included
+
+        //only if more than 1 img contained
+        name: "LN Evolution Suit",
+        descrip: "Previous fan suit based off of LN's evolution mechanics. ",
+    },
+    {
+        tnIndex: 8, //index of thumbnail
+        imgsIndex: [64, 60, 8], //indexes of all images included
+
+        //only if more than 1 img contained
+        name: "Candy in a Glass",
+        descrip: "",
+    },
+    {
         tnIndex: 66, //index of thumbnail
         imgsIndex: [66, 67, 68], //indexes of all images included
 
@@ -2288,8 +2352,8 @@ const imgSets = [
         imgsIndex: [69, 70, 71, 72], //indexes of all images included
 
         //only if more than 1 img contained
-        name: "",
-        descrip: "",
+        name: "Cabin Project",
+        descrip: "Incooporating blender into backgrounds. ",
     },
     {
         tnIndex: 76, //index of thumbnail
@@ -2306,8 +2370,31 @@ const imgSets = [
         //only if more than 1 img contained
         name: "Glazelings",
         descrip: "Changing the characters so they are more colourful. ",
-    } // todo 81 - 84 seperate images
+    },
+    {
+        tnIndex: 87, //index of thumbnail
+        imgsIndex: [87, 88], //indexes of all images included
 
+        //only if more than 1 img contained
+        name: "Butterflies",
+        descrip: "Front and back of butterfly character. Her design was based partly off an earlier work. ",
+    },
+    {
+        tnIndex: 93, //index of thumbnail
+        imgsIndex: [93, 102, 103, 94, 95, 101, 96, 97, 98, 99, 100], //indexes of all images included
+
+        //only if more than 1 img contained
+        name: "Genshin Fan Character",
+        descrip: "Her splash art was the first thing finished, followed by her normal and charged attack strings. After a year she was redesigned and modeled in blender, and her skill descriptions were finally completed. ",
+    },
+    {
+        tnIndex: 110, //index of thumbnail
+        imgsIndex: [110, 111], //indexes of all images included
+
+        //only if more than 1 img contained
+        name: "Bird",
+        descrip: "",
+    }
 
 
     /*copy and past to bottom, read from b to t

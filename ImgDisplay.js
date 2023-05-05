@@ -1,22 +1,37 @@
 //==============================| Elements |=======================================
 var gallery = document.getElementById('gallery');
 const modals = document.getElementsByClassName("modal");
+const mcont = document.getElementById('mcont');
 let height = 200;
 
 /* =========================| Images |========================= */
-
-
-//function for creating google docs path
+function getImg(i) {
+    //returns the image object for i (index)
+    return allImgs[i];
+}
+function getSet(si) {
+    //returns the image set with index si (set index)
+    return imgSets[si];
+}
 function getGooglePath(id) {
+//function for creating google docs path
     //id rrefers to the long string after the google share thing
     return "https://drive.google.com/uc?id=" + id;
 }
 
+
+
 //function for creating exanded display layout
 
 //creating img backgorund and container
+function getSetDiv(si) {
+    let i = getSet(si).tnIndex;
+    //for sets, do not use inside modal
+    return '<div class="test" ' + getDivStyle(getDivAspect(i)) + ' > ' + getImgElement(i) + ' </div>';
+}
 
-function getDiv(i) { //this is needed for lazy loading I think
+function getImgDiv(i) {
+    //this is needed for lazy loading I think
     return '<div class="test" ' + getDivStyle(getDivAspect(i)) + ' > ' + getImgElement(i) + ' </div>';
 }
 
@@ -45,11 +60,6 @@ function getImgElement(i) {
         + getLazyLoad()
         + ' /> ';
 
-}
-
-function getImg(i) {
-    //returns the image object for i (index)
-    return allImgs[i];
 }
 
 function getClass(img) {
@@ -86,24 +96,45 @@ function setGallerySomeImgs(a, b) {
         gallery.innerHTML += getImgGalleryDiv(i);
     }
 }
+
+function setGalleryAllSets() {
+    for (si = 0; si < imgSets.length; si++) {
+        vore += getStackGalleryDiv(si);
+    }
+    gallery.innerHTML = vore;
+}
+
+
 function getImgGalleryDiv(i) {
     //where i is the stack number
-    let front = '<div class="imgframe"' + getFrameStyle(i) + '><div class="imgcont">';
+    let front = '<div class="imgframe"' + getFrameStyle(i) + getActionImg(i) + '><div class="imgcont">';
     let mid = '</div>';
     let back = '</div>';
-    return front + getDiv(i) + mid + back;
+    return front + getImgDiv(i) + mid + back;
+}
+function getActionImg(i) {
+    return ' onclick="openModalImg(' +i+ ') " ';
 }
 function getStackGalleryDiv(si) {
-    //where i is the stack number
-    let front = '<div class="imgframe"><div class="imgcont">';
+    //where si is the stack number
+    let front = '<div class="imgframe"' + getFrameStyle(getSet(si).tnIndex) + getActionStack(si) + '><div class="imgcont">';
     let mid = '</div>';
     let back = '</div>';
-    return front + getDiv(si) + mid + getStackInd(si) + back;
+    return front + getSetDiv(si) + mid + getStackInd(si) + back;
 }
+function getActionStack(si) {
+    return ' onclick=" openModalSet( ' + si + ')" ';
+}
+
+
 function getFrameStyle(i) {
+    //sets the frame style to be the right width for gallery
+    //add here for more styles
     return ' style="width:' + getWidth(i) + 'px" ';
 }
 function getStackInd(si) {
+    //returns no stack ind if stack only has 1 item,
+    //and returns the stack ind str otherwise
     if (imgSets[si].imgsIndex.length == 1) {
         return '';
     }
@@ -111,23 +142,11 @@ function getStackInd(si) {
         return '<div class="stackind"></div>';
     }
 }
-function getWidth(i) {
-    let a = ratioToInts(i);
-    return height * (a[0] / a[1]);
-}
-function ratioToInts(i) {
-    s = getImg(i).ratio;
-    a = s.split('/');
-    return [Number(a[0]), Number(a[1])];
-}
-
-//this is what to do, backslashes do not affect it yay
 
 
-//console.log(allImgs[0].additionals());
 
 
-//This is for finding image aspect ratios 
+//These are for imge aspect ratios 
 function findGCD(a, b) {
     let n = 0;
     let d = 0;
@@ -162,6 +181,23 @@ function simplify(a, b) {
     b = b / gcd;
     return " " + a + "_" + b + " ";
 }
+function getWidth(i) {
+    let a = ratioToInts(i);
+    return height * (a[0] / a[1]);
+}
+function ratioToInts(i) {
+    s = getImg(i).ratio;
+    if (s.includes('/')) {
+        a = s.split('/');
+        return [Number(a[0]), Number(a[1])];
+    }
+    else {
+        a = Number(s);
+        return [a, 1];
+    }
+ 
+
+}
 
 //===================|modals|=======================================
 //modal code, make sure you only have 1 modal
@@ -192,9 +228,59 @@ function openModal() {
         modals[i].style.display = 'block';
     }
 }
+function openModalSet(si) {
+    for (i = 0; i < modals.length; i++) {
+        modals[i].style.display = 'block';
+    }
+    mcont.innerHTML = getModalSet(si);
+}
+function openModalImg(i) {
+    //console.log('img requested:' + i);
 
-setGalleryAllImgs();
-//var hey = document.getElementById('hey');
-//for (i = 104; i < allImgs.length; i++) {
-//    hey.innerHTML += getDiv(i);
-//}
+    for (j = 0; j < modals.length; j++) {
+        modals[j].style.display = 'block';
+    }
+    mcont.innerHTML = getModalImage(i);
+}
+
+function getModalSet(si) {
+    var set = getSet(si);
+    let sn = '';
+    let sd = '';
+    if (set.name != '') {
+        sn = '<h1>' + set.name + ' </h1>';
+    }
+    if (set.descrip != '') {
+        sd = '<p>' + set.descrip + '</p>';
+    }
+
+    toRet = sn + sd;
+
+    for (ii = 0; ii < set.imgsIndex.length; ii++) {
+        toRet += getModalImage(set.imgsIndex[ii]);
+    }
+    return toRet;
+}
+
+function getModalImage(i) {
+    //console.log('img requested:' + i);
+    let name = '';
+    let descrip = '';
+
+    if (getImg(i).name != '') {
+        name = '<h2>' + getImg(i).name + '</h2>';
+    }
+    if (getImg(i).descrip != '') {
+        descrip = '<p>' + getImg(i).descrip + '</p>';
+    }
+
+    return name + getImgDiv(i) + descrip;
+
+}
+
+//setGalleryAllImgs();
+
+let vore = '';
+
+
+setGallerySomeImgs(80, 90);
