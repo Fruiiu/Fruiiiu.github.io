@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="ImgViewStyleSheet.css" />
     <link rel="icon" type="image/x-icon" href="main/Favicon36.png" />
 </head>
-<body>
+<body style="background-color: #661523">
 
 
     <!--modal window testing, make a modal window-->
@@ -21,9 +21,6 @@
             <h1>Group Name (turn off when not set)</h1>
             <p>blah blah blah ... group descrip</p>
             <h2 id="hey">Image title</h2>
-            <!--
-    <img class="red" src="https://drive.google.com/uc?id=188QjvW06eDdlZjhWN3du4Njqg6FshEq-" alt="you fogor" />
-    -->
             <p>
                 img description blah blah blabity blah blah blabity blah blah blabity
                 blah blah blabity blah blah blabity
@@ -41,11 +38,21 @@
     <button onclick="openModal()" >Modal Open</button>
     <div>
         This is a gallery of all the works, unorganised
-
     </div>
 
-    <!--all da scripts hereererer-->
+    <div class="gallery" id="gallery">
+        <div class="imgframe">
+            <div class="imgcont">
+                <div class="test">
+                    <img id="i43" title="43" class="green" src="https://drive.google.com/uc?id=1_4eHfA2tXxSh6zxNhGmQo8v8CpOqQ4ip" alt="Smile" loading="lazy">
+                </div>
+            </div>
+            <div class="stackind"></div>
+        </div>
+    </div>
+
+    <!--all da scripts here-->
     <script src="ImgData.js"></script>
-    <script src="Modal.js"></script>
+    <script src="ImgDisplay.js"></script>
 </body>
 </html>

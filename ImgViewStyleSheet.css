@@ -2,15 +2,19 @@
     this refers to image layout, image modals, etc
 */
 /* GENERAL |======================================*/
+
 *{
     color:white;
 }
 
+.gallery{
+    display:flex;
+    width:100%;
+
+}
+
 /* MODALS |==========================================*/
 .modal {
-    /* toggle block to none */
-    display: none;
-    z-index: 6; /*3 is taken by top elements*/
     /*positioning*/
     position: fixed; /* Stay in place */
     left: 0;
@@ -23,20 +27,16 @@
     flex-direction: column;
     background: linear-gradient(
         90deg, 
-        rgba(20,10,20, 0.6), 
-        rgba(20,10,20, 0.8) 15% 85%, 
-        rgba(20,10,20, 0.6));
+        rgba(20,10,20, 0.7), 
+        rgba(20,10,20, 0.9) 15% 85%, 
+        rgba(20,10,20, 0.7));
     /*replace with appropreate background*/
+    /* toggle block to none */
+    display: none;
+    z-index: 6; /*3 is taken by top elements*/
 }
 
-    /* Modal Content */
-/*to add when nessecary, for now find in image containers*/
-
-
 /*modal close button*/
-/*explaination : sticky container to stay fixed
-
-*/
 .close {
     position:fixed;
     top:0px;
@@ -54,13 +54,13 @@
     opacity:0.3;
     transition:0.2s;
 }
-
     .close>p:hover,
     .close>p:focus {
         color: black;
         opacity:0.9;
         font-size:38px;
     }
+
 
 /* IMG DISPLAYS |============================================== */
 .expcont{
@@ -102,18 +102,37 @@ img.blue{
 /*note this is only to be used for thumbnail displays*/
 .imgframe{
     position:relative;
+    width:300px;
+    height:auto;
 }
 
 .imgcont{
     width:inherit;
     position:absolute;
+    transition:0.2s;
+}
+.imgcont:hover{
+    filter:brightness(0.7);
 }
 
-.wewewe{
-    background:orange;
-}
 
 div.test{
     width:100%;
-    aspect-ratio:1/1;
+    aspect-ratio:1/1; /*for backup*/
+}
+
+.stackind {
+    background-image: url(main/StackInd.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    opacity:0.4;
+    transition: 0.2s;
+}
+.imgcont:hover ~ .stackind{
+    opacity:1;
 }
