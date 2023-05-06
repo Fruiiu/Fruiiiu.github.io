@@ -34,6 +34,10 @@ a {
     flex-direction: column;
 }
 
+.scroll{
+    overflow:scroll;
+}
+
 .center{
     justify-content:center;
 }

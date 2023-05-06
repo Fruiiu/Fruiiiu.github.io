@@ -111,7 +111,7 @@ function getSetElement(si) {
 }
 
 function getClass(img) {
-    return ' class = "' + img.bg + '" ';
+    return ' class = "gal ' + img.bg + '" ';
 
 }
 function getSRC(img) {
@@ -461,6 +461,19 @@ function listToString(los) {
 //please use lists of strings that refers to images only
 
 //find top 10 most relevant imgs
-function findTopNum() {
+function commTopX( finish, size, additionals ) {
+    //finish : 0-4
+    //size : 1-3
+    //additionals: >= 0
+    //want finish to be most relevant
+    //size and additionals are extras
+    //less relevance larger numbers
+    /*
+     1) find all with relevant finish
+     2) 
+     
+     
+     */ 
+
     return [];
 }

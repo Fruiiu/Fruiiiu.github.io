@@ -1,6 +1,4 @@
-// JavaScript source code
-
-//variables needed
+//===============| variables |=========================================================================
 var slider = document.getElementById("range1");
 
 var size_mask = document.getElementById("size-mask");
@@ -12,6 +10,7 @@ for (i =1; i < 10; i++) {
     additionals.push(document.getElementById("add" + i));
 }
 
+//================| triggers |========================================================================
 //onload
 window.onload = function () {
     console.log("onload called");
@@ -46,10 +45,10 @@ function onElementChange(i) {
 
 //every input of example change
 function onExampleChange() {
-    
+    //add gallery thing here
 }
 
-//other functions
+//==========| other functions |===================================================================
 
 function switchChar(a) {
     i = Number(a);

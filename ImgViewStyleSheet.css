@@ -87,7 +87,7 @@ img.red {
 img.white {
     background: radial-gradient(white, #D3F1F4);
 }
-img{
+img.gal{
     width:100%;
 }
 img.magenta{
