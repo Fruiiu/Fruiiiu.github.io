@@ -12,7 +12,7 @@
 
 /*=========================| DATA |========================= */
 
-
+//images (add new works here)----------------------------------------------------------------------------
 const allImgs = [
     {
         //
@@ -1693,7 +1693,7 @@ const allImgs = [
 
         //gallery settings
         name: "Butterfly Heir Back",
-        descrip: "The unfinished sketch of the back of the character.",
+        descrip: "The sketch of the back of the character.",
         bg: "None",
         ratio: "1",
 
@@ -2084,7 +2084,7 @@ const allImgs = [
         id: "1ZEFzuo1rLQMnrHll2D_QK_Zgd06jNwRY",
 
         //gallery settings
-        name: "Armour",
+        name: "Armor",
         descrip: "Early design for one of the glazelings.",
         bg: "None",
         ratio: "4/5",
@@ -2237,35 +2237,8 @@ const allImgs = [
 
 ];
 
-//testing
-/*
- console.log(allImgs.length);
-var hey = document.getElementById("hey");
-v = "";
-for (i = 85; i < allImgs.length; i++) {//
-    v += getDiv(i);
-}
-hey.innerHTML = v;
- 
- */ 
-/* paste into console for img ratio, img element must be valid
 
- let a = 0;
-let b = 0;
-let gcd = 0;
-
-for (i = 104; i < allImgs.length; i++) { //replace with starting index
-  let heyi = document.getElementById("i" + i);
-  a = heyi.naturalWidth;
-  b= heyi.naturalHeight;
-  
-  console.log(i, allImgs[i].name, simplify(a, b) );
-}
-
- */ 
-
-
-//image sets, will be displayed in portfolio (set up after gallery)
+//image sets, will be displayed in portfolio (set up with gallery)-----------------------------------------
 const imgSets = [
     {
         tnIndex: 1, //index of thumbnail
@@ -2412,5 +2385,44 @@ const imgSets = [
      */ 
 ];
 
+//side sets-------------------------------------------------------------------------------
+const backgrounds = [
+    'i20', 'i27', 'i91', 'i106', 'i71', 'i76', 'i115'
+]
+const portfolio = [
+    'i0', 's15', 's8', 'i33', 'i24',
+    'i85', 'i84', 'i78', 's13', 'i86',
+    'i107', 'i89', 'i52', 'i106', 'i91',
+    'i108', 's11', 'i115', 's4', 'i36',
+    'i37', 'i34', 's10', 's14'
+]
 
 
+
+
+//======| testing (paste into console) |==============================================
+/*
+ console.log(allImgs.length);
+var hey = document.getElementById("hey");
+v = "";
+for (i = 85; i < allImgs.length; i++) {//
+    v += getDiv(i);
+}
+hey.innerHTML = v;
+ 
+ */
+/* paste into console for img ratio, img element must be valid
+
+ let a = 0;
+let b = 0;
+let gcd = 0;
+
+for (i = 104; i < allImgs.length; i++) { //replace with starting index
+  let heyi = document.getElementById("i" + i);
+  a = heyi.naturalWidth;
+  b= heyi.naturalHeight;
+  
+  console.log(i, allImgs[i].name, simplify(a, b) );
+}
+
+ */

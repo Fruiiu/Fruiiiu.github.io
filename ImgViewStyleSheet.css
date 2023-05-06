@@ -14,7 +14,7 @@ body{
 
 .gallery{
     display:flex;
-    flex-direction:row-reverse;
+    flex-direction:row;
     flex-wrap:wrap;
     width:100%;
     justify-content:center;

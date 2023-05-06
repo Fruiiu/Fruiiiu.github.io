@@ -18,12 +18,8 @@
         <div class="close" onclick="closeModal()">
             <p>&times</p>
         </div>
-
-        <div class="expcont" id="mcont">
-            
-            
+        <div class="expcont" id="mcont">           
         </div>
-
     </div>
 
     <div> <h1>This is for portfolio</h1></div>
@@ -34,22 +30,19 @@
     <div> float this to the left, this will be a toggle for horizontal or vertical columns</div>
     <button onclick="openModal()" >Modal Open</button>
     <div>
-        This is a gallery of all the works, unorganised
+       <button onclick="setGallery(readListString(portfolio))">Portfolio</button> 
+        <button onclick="setGallery(readListString(backgrounds))">Backgrounds</button>
     </div>
 
-    <div class="gallery" id="gallery">
-        <div class="imgframe">
-            <div class="imgcont">
-                <div class="test">
-                    <img id="i43" title="43" class="green" src="https://drive.google.com/uc?id=1_4eHfA2tXxSh6zxNhGmQo8v8CpOqQ4ip" alt="Smile" loading="lazy">
-                </div>
-            </div>
-            <div class="stackind"></div>
-        </div>
+    <div class="gallery" id="gallery"> <!--leave this in for js to find-->
     </div>
 
     <!--all da scripts here-->
     <script src="ImgData.js"></script>
     <script src="ImgDisplay.js"></script>
+    <script>
+        changeHeight(400);
+        changeInGallery(false);
+    </script>
 </body>
 </html>

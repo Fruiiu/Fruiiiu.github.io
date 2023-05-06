@@ -154,7 +154,7 @@ function getSetID(si) {
 //outer display for thumbnails
 
 function getImgGalleryDiv(i) {
-    //where i is the stack number
+    //where i is the Set number
     let front = '<div class="imgframe"' + getFrameStyle(i) + getActionImg(i) + '><div class="imgcont">';
     let mid = '</div>';
     let back = '</div>';
@@ -163,14 +163,14 @@ function getImgGalleryDiv(i) {
 function getActionImg(i) {
     return ' onclick="openModalImg(' +i+ ') " ';
 }
-function getStackGalleryDiv(si) {
-    //where si is the stack number
-    let front = '<div class="imgframe"' + getFrameStyle(getSet(si).tnIndex) + getActionStack(si) + '><div class="imgcont">';
+function getSetGalleryDiv(si) {
+    //where si is the Set number
+    let front = '<div class="imgframe"' + getFrameStyle(getSet(si).tnIndex) + getActionSet(si) + '><div class="imgcont">';
     let mid = '</div>';
     let back = '</div>';
-    return front + getSetDiv(si) + mid + getStackInd(si) + back;
+    return front + getSetDiv(si) + mid + getSetInd(si) + back;
 }
-function getActionStack(si) {
+function getActionSet(si) {
     return ' onclick=" openModalSet( ' + si + ')" ';
 }
 
@@ -179,9 +179,9 @@ function getFrameStyle(i) {
     //add here for more styles
     return ' style="width:' + getWidth(i) + 'px" ';
 }
-function getStackInd(si) {
-    //returns no stack ind if stack only has 1 item,
-    //and returns the stack ind str otherwise
+function getSetInd(si) {
+    //returns no Set ind if Set only has 1 item,
+    //and returns the Set ind str otherwise
     if (imgSets[si].imgsIndex.length == 1) {
         return '';
     }
@@ -207,7 +207,7 @@ function setGalleryAllImgs() {
 function setGalleryAllSets() {
     vore = '';
     for (si = 0; si < imgSets.length; si++) {
-        vore += getStackGalleryDiv(si);
+        vore += getSetGalleryDiv(si);
     }
     gallery.innerHTML = vore;
 }
@@ -349,7 +349,6 @@ function getModalImage(i) {
 }
 
 
-setGallerySomeImgs(78, 84);
 
 //===================| Img set processes |========================================================================================
 function Range(a, b) {
@@ -361,18 +360,54 @@ function Range(a, b) {
     return ar;
 }
 
+function getOrganised() {
+    //get list of all img indecies
+    const loi = Range(0, allImgs.length);
+    var iToRemove = -1;
+
+    //for all sets of images
+    for (si = 0; si < imgSets.length; si++) {
+        //for all image indicies within it
+        for (j = 0; j < imgSets[si].imgsIndex.length; j++) {
+            //check if ii included, if it hasn't been removed, remove it
+            iToRemove = loi.indexOf(imgSets[si].imgsIndex[j]);
+
+            if (iToRemove < 0) {
+                continue;
+            }
+            else {
+                loi.splice(iToRemove, 1)
+            }
+        }
+
+        loi.splice(imgSets[si].tnIndex, 0, ("s" + si));
+    }
+
+    //add i to not set
+    for (k = 0; k < loi.length; k++) {
+        if (typeof loi[k] == typeof 1) {
+            loi[k] = 'i' + loi[k];
+        }
+        else {
+            continue;
+        }
+    }
+
+    return loi;
+}
+
 //img lists - i# and s# - read and output as gallery
 function readListString(los) {
     let final = '';
     let num = -1;
     let s = 'not';
 
-    for (i = 0; i < los.length; i++) {
+    for (i =los.length-1; i >= 0 ; i--) {
         s = los[i];
 
         if (s.includes('s')) {
             num = Number(s.slice(1, s.length));
-            final += getStackGalleryDiv(num);
+            final += getSetGalleryDiv(num);
         }
         else if (s.includes('i')) {
             num = Number(s.slice(1, s.length));
@@ -403,5 +438,3 @@ function readListObject(los) {
 
     return loo;
 }
-
-console.log(readListObject(['s3', 'i88', 'i78']));
