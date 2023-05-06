@@ -384,6 +384,11 @@ function getOrganised() {
     }
 
     //add i to not set
+    addI(loi);
+
+    return loi;
+}
+function addI(loi) {
     for (k = 0; k < loi.length; k++) {
         if (typeof loi[k] == typeof 1) {
             loi[k] = 'i' + loi[k];
@@ -392,8 +397,6 @@ function getOrganised() {
             continue;
         }
     }
-
-    return loi;
 }
 
 //img lists - i# and s# - read and output as gallery
@@ -437,4 +440,27 @@ function readListObject(los) {
     }
 
     return loo;
+}
+
+
+function listToString(los) {
+    if (los.length == 0) {
+        return '[]';
+    }
+
+    l = '"'+los[0]+'"' ;
+    for (i = 1; i < los.length; i++) {
+        l += ',"'+ los[i]+'"' ;
+    }
+
+    return '[' + l + ']';
+}
+
+
+//===================| commision example |===================================================================================
+//please use lists of strings that refers to images only
+
+//find top 10 most relevant imgs
+function findTopNum() {
+    return [];
 }
