@@ -10,15 +10,20 @@ for (i =1; i < 10; i++) {
     additionals.push(document.getElementById("add" + i));
 }
 
+let size = 1; //for size
+//number(slider.value) for finish
+//number(num_elements.innerhtml) dor size
+
 //================| triggers |========================================================================
 //onload
 window.onload = function () {
-    console.log("onload called");
+    //console.log("onload called");
 
     switchChar(slider.value);
     setMask(getMaskPath(1));
 
     styleAllMasks(slider.value);
+    onExampleChange();
 
 };
 
@@ -32,6 +37,7 @@ slider.oninput = function () {
 }
 
 function onSizeChange(i) {
+    size = i;
     onExampleChange();
     setMask(getMaskPath(i));
 }
@@ -46,6 +52,14 @@ function onElementChange(i) {
 //every input of example change
 function onExampleChange() {
     //add gallery thing here
+    setGallery(
+        readListString(
+            commTopX(
+                Number(slider.value),
+                size,
+                Number(num_elements.innerHTML))
+        )
+    );
 }
 
 //==========| other functions |===================================================================

@@ -291,7 +291,7 @@ function closeModal() {
         modals[i].style.display = 'none';
     }
     modalOpen = false;
-    console.log('modal Opened:' + modalOpen);
+    //console.log('modal Opened:' + modalOpen);
     setScroll();
 }
 
@@ -300,7 +300,7 @@ function openModal() {
         modals[i].style.display = 'block';
     }
     modalOpen = true;
-    console.log('modal Opened:' + modalOpen);
+    //console.log('modal Opened:' + modalOpen);
     setScroll();
 }
 function openModalSet(si) {
@@ -461,19 +461,115 @@ function listToString(los) {
 //please use lists of strings that refers to images only
 
 //find top 10 most relevant imgs
-function commTopX( finish, size, additionals ) {
+function commTopX(finish, size, additionals) {
+    //console.log(finish, size, additionals);
     //finish : 0-4
     //size : 1-3
     //additionals: >= 0
-    //want finish to be most relevant
-    //size and additionals are extras
-    //less relevance larger numbers
-    /*
-     1) find all with relevant finish
-     2) 
-     
-     
-     */ 
 
-    return [];
+    const select = [];
+
+    for (i = 0; i < commExamples.length; i++) {
+        ind = determineIndex(commExamples[i], select, finish, size, additionals);
+        select.splice( ind, 0, commExamples[i]);
+        //change this number for longer or shorter lists
+        select.splice(8, select.length - 8);
+    }
+
+    return select.reverse();
 }
+
+function determineIndex(str, arr, finish, size, additionals) {
+    if (arr.length == 0) {
+        return 0;
+    }
+
+    //console.log('function called ' + str);
+
+    //the value of the
+    rel = determineRelevance(str, finish, size, additionals);
+    //value of any array at i
+    // determineRelevance(arr[ind], finish, size, additionals);
+    s = 0;
+    //console.log(s);
+    l = arr.length - 1;
+    ind = 0;
+    aRel = -1000;
+
+    while (Math.abs(l - s) > 1) {
+        ind = between(s, l);
+        aRel = determineRelevance(arr[ind], finish, size, additionals);
+
+        if (rel == aRel) {
+            //console.log('same value found:', rel, determineRelevance(arr[ind], finish, size, additionals));
+            return ind;
+        }
+        else if (aRel> rel ) {
+            l = ind;
+            //console.log('rel smaller than element at index, large set to ind.')
+        }
+        else if ( aRel <rel) {
+            s = ind;
+            //console.log('rel larger than element at index, small set to ind.')
+        }
+    }
+
+    if (ind == s) {
+        ind = l;
+    }
+    else if (ind == l) {
+        ind = s;
+    }
+    aRel = determineRelevance(arr[ind], finish, size, additionals);
+    if (aRel > rel) {
+        return ind;
+    }
+    else {
+        return ind + 1;
+    }
+
+    console.log('determine idex code broken, returned : ' + s);
+    return s;
+
+}
+function between(a, b) {
+    return Math.ceil((a + b) / 2);
+}
+
+function determineRelevance(str, finish, size, additionals) {
+    
+    var img = getImg(Number(str.slice(1, str.length)));
+    //values will be negative if the image has less than requested
+    //negatives penalized more than positives
+
+    //change the multiples for different importance
+    //console.log('got:', finish, size, additionals);
+    //console.log('img:', img.finish, img.size, img.additionals());
+
+    df = (img.finish - finish) * 5;
+    ds = (img.size - size) * 1;
+    da = (img.additionals() - additionals) * 0.05;
+
+    nn = 0;
+
+    if (df < 0) {
+        nn++;
+        df *= -1;
+    }
+    if (ds < 0) {
+        nn++;
+        ds *= -1;
+    }
+    if (da < 0) {
+        nn++;
+        da *= -0.1;
+
+    }
+    //console.log("df, ds, da, nn:" , df ,ds , da , nn);
+
+    nn *= 1;
+
+    //console.log("relevance:", df + ds + da + nn);
+    return df + ds + da + nn;
+}
+

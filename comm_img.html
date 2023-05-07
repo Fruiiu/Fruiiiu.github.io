@@ -36,7 +36,7 @@
 
     </div>
     <!--commision interactible-->
-    <div class="flex wrap">
+    <div class="flex">
 
         <!--commision display-->
         <div class="stackcontainer">
@@ -184,20 +184,24 @@
         </div>
 
         <!--commision explanation and examples-->
-        <div class="vflex scroll">
+        <div class="vflex">
             <p> description of what to explect here</p>
-            <div class="gallery" id="gallery" >
-                <!--leave this in for js to find-->
+            <div class="vflex scroll" style="height:500px;">
+                <!--TODO: adjust height manually after descrip finished-->
+                <div class="gallery" id="gallery" style="width:99%;">
+                    <!--leave this in for js to find-->
+                </div>
             </div>
         </div>
+
 
     </div>
 
     <!--footer-->
     <!-- SCRIPT LOAD -->
+    <script src="ImgData.js"></script>
     <script src="comm_java_script.js"></script>
     <script src="ImgDisplay.js"></script>
-    <script src="ImgData.js"></script>
     <script>
         changeInGallery(false);
         changeHeight(200);

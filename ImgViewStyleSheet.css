@@ -89,6 +89,7 @@ img.white {
 }
 img.gal{
     width:100%;
+    margin:0px;
 }
 img.magenta{
     background: radial-gradient(#C74D80, #63104e);
@@ -112,6 +113,7 @@ img.blue{
     position:relative;
     height:400px;
     width:auto;
+    margin:5px;
 }
 
 .imgcont{
