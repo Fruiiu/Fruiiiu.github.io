@@ -1,0 +1,62 @@
+﻿
+* {
+    color: white;
+}
+body {
+    position: relative;
+    margin: 0px;
+    height: 100%;
+    overflow: scroll;
+    background-color:darkslategray;
+}
+.headerBg{
+    position: absolute;
+}
+
+.header {
+    position: relative;
+    aspect-ratio: 3/2;
+    width: 100%;
+    background-image: url(https://drive.google.com/uc?id=19NSuwdnSkI6PFA9T2EDnjDp44EqMWvsv);
+    background-size:contain;
+}
+
+.headerAct {
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 11%;
+    height: 5%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/*da buttons*/
+
+#aw {
+    background-image: url("https://drive.google.com/uc?id=1Ym7xDDLv6gcZPVvAvGn_KbiJOXGyx_7z" );
+    top: 56.3%;
+}
+
+    #aw:hover {
+        background-image: url("https://drive.google.com/uc?id=1PbvivDXmGzHixDaDbpYYMkQrEBkBlZ9x" );
+    }
+
+#des {
+    background-image: url("https://drive.google.com/uc?id=1PSmOMtVZFySaWt2_R3fL3mS4Zw1Vdxrr" );
+    top: 62.7%;
+}
+
+    #des:hover {
+        background-image: url("https://drive.google.com/uc?id=12wITdn2vQ02v65Z6O6Wj8Ot3N3ioD8Mc" );
+    }
+
+#bg {
+    background-image: url("https://drive.google.com/uc?id=1mJxtAE0wCaNBtfFGJ8UohSoPghY3J9Uj" );
+    top: 69.6%;
+}
+
+    #bg:hover {
+        background-image: url("https://drive.google.com/uc?id=1GbNvfIKZaRhVHx6LKEtZD1Ko79tb1d6n" );
+    }

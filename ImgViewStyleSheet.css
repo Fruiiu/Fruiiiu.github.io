@@ -3,14 +3,6 @@
 */
 /* GENERAL |======================================*/
 
-*{
-    color:white;
-}
-
-body{
-    height:100%;
-    overflow:scroll;
-}
 
 .gallery{
     display:flex;

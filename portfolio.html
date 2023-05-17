@@ -5,37 +5,50 @@
     <meta charset="utf-8" />
     <title>Portfolio</title>
     <link rel="stylesheet" href="ImgViewStyleSheet.css" />
+    <link rel="stylesheet" href="PortStyleSheet.css" />
     <link rel="icon" type="image/x-icon" href="main/Favicon36.png" />
 
 
 </head>
-<body style="background-color: #661523">
-
-
+<body>
     <!--modal window testing, make a modal window-->
 
     <div class="modal">
         <div class="close" onclick="closeModal()">
             <p>&times</p>
         </div>
-        <div class="expcont" id="mcont">           
+        <div class="expcont" id="mcont">
         </div>
     </div>
 
-    <div> <h1>This is for portfolio</h1></div>
+
+    <!--header-->
+    <!--<img class="headerBg"
+         src="https://drive.google.com/uc?id=19NSuwdnSkI6PFA9T2EDnjDp44EqMWvsv"
+         style="width:100%;" />-->
+    <div class="header" title="this was done in blender :3"> <!--all buttons-->
+        <div id="aw" class="headerAct" onclick="setGallery(readListString(portfolio))"> </div>
+        <div id="des" class="headerAct" onclick="setGallery(readListString(charDes))"> </div>
+        <div id="bg" class="headerAct" onclick="setGallery(readListString(backgrounds))"> </div>
+    </div>
+
+
+
+    <!--<div> <h1>This is for portfolio</h1></div>
     <div>
         this is supposed to contain the catergories of stuff to look at
     </div>
 
     <div> float this to the left, this will be a toggle for horizontal or vertical columns</div>
-    <button onclick="openModal()" >Modal Open</button>
+    <button onclick="openModal()">Modal Open</button>
     <div>
-       <button onclick="setGallery(readListString(portfolio))">all</button> 
+        <button onclick="setGallery(readListString(portfolio))">all</button>
         <button onclick="setGallery(readListString(backgrounds))">Backgrounds</button>
         <button onclick="setGallery(readListString(charDes))">char des</button>
-    </div>
+    </div>-->
 
-    <div class="gallery" id="gallery"> <!--leave this in for js to find-->
+    <div class="gallery" id="gallery">
+        <!--leave this in for js to find-->
     </div>
 
     <!--all da scripts here-->
