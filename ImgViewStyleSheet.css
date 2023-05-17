@@ -50,15 +50,15 @@
     margin-top:10px;
     margin-bottom:10px;
 
-    color:black;
-    opacity:0.3;
+    color:white;
+    opacity:0.6;
     transition:0.2s;
 }
     .close>p:hover,
     .close>p:focus {
-        color: black;
+        color: white;
         opacity:0.9;
-        font-size:38px;
+        font-size:36px;
     }
 
 

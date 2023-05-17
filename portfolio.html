@@ -11,6 +11,7 @@
 
 </head>
 <body>
+    <div class="blurall" ></div>
     <!--modal window testing, make a modal window-->
 
     <div class="modal">
@@ -26,26 +27,29 @@
     <!--<img class="headerBg"
          src="https://drive.google.com/uc?id=19NSuwdnSkI6PFA9T2EDnjDp44EqMWvsv"
          style="width:100%;" />-->
-    <div class="header" title="this was done in blender :3"> <!--all buttons-->
-        <div id="aw" class="headerAct" onclick="setGallery(readListString(portfolio))"> </div>
-        <div id="des" class="headerAct" onclick="setGallery(readListString(charDes))"> </div>
-        <div id="bg" class="headerAct" onclick="setGallery(readListString(backgrounds))"> </div>
+    <div class="header" id="headerr">
+        <div title="this was done in blender :3">
+            <!--all buttons-->
+            <div id="aw" class="headerAct" onclick="setGallery(readListString(portfolio))"> </div>
+            <div id="des" class="headerAct" onclick="setGallery(readListString(charDes))"> </div>
+            <div id="bg" class="headerAct" onclick="setGallery(readListString(backgrounds))"> </div>
+        </div>
     </div>
 
 
+    <!--menu to the left-->
+    <div class="menu">
 
-    <!--<div> <h1>This is for portfolio</h1></div>
-    <div>
-        this is supposed to contain the catergories of stuff to look at
+        <a href="index.html" class="menuItem" id="home">
+            <img src="input/Home.png" alt="Home" />
+        </a>
+
+        <a href="#headerr" class="menuItem" id="top">
+            <img  src="input/Top.png" alt="Top" />
+        </a>
     </div>
 
-    <div> float this to the left, this will be a toggle for horizontal or vertical columns</div>
-    <button onclick="openModal()">Modal Open</button>
-    <div>
-        <button onclick="setGallery(readListString(portfolio))">all</button>
-        <button onclick="setGallery(readListString(backgrounds))">Backgrounds</button>
-        <button onclick="setGallery(readListString(charDes))">char des</button>
-    </div>-->
+    <div style="height:700px;" ></div>
 
     <div class="gallery" id="gallery">
         <!--leave this in for js to find-->
