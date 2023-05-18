@@ -2,6 +2,14 @@
     scroll-behavior:smooth;
 }
 
+a {
+    color: #A9F4FF;
+}
+
+    a:visited {
+        color: #7CA9FF;
+    }
+
 
 * {
     color: white;
