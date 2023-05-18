@@ -1,0 +1,50 @@
+﻿html {
+    scroll-behavior: smooth;
+}
+
+a {
+    color: #A9F4FF;
+}
+
+    a:visited {
+        color: #7CA9FF;
+    }
+
+body{
+    overflow:hidden;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+
+/* paralax layers, only 5 for now */
+
+.parallax {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events:none;
+    transition:0.2s;
+}
+.parallax>img{
+    height:500px;
+}
+
+.pl0{
+    z-index:0;
+}
+.pl1 {
+    z-index: -1;
+}
+.pl2 {
+    z-index: -2;
+}
+.pl3 {
+    z-index: -3;
+}
+.pl4 {
+    z-index: -4;
+}
