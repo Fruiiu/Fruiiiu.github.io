@@ -3,19 +3,62 @@
 // VARIABLES |======================================================
 
 
+const lop = document.getElementsByClassName('parallax');
+var wiggle = screen.availWidth /20;
+let wImg = 0;
+var scaleDown = 2;
+const lol = document.getElementsByClassName('loading');
 
-const p0 = document.getElementsByClassName('pl0');
-const p1 = document.getElementsByClassName('pl1');
-const p2 = document.getElementsByClassName('pl2');
-const p3 = document.getElementsByClassName('pl3');
-const p4 = document.getElementsByClassName('pl4');
-
-
+setUp();
 // EVENTS |=================================================
-window.addEventListener("mousemove", (e) => {
-    console.log('you');
-    changePos(e.clientX, e.clientY);
-});
+window.onload = function () {
+
+}
+
+function setUp() {
+
+    if (screen.availWidth/4*3 > screen.availHeight) {
+        wImg = screen.availWidth + 2 * wiggle;
+    }
+    else {
+        wImg = screen.availHeight + 2 * wiggle;
+    }
+
+    for (i = 0; i < lop.length; i++) {
+        lop[i].style.width = String(wImg) + "px";
+    }
+
+    window.addEventListener("mousemove", (e) =>
+        {
+            changePos(e.clientX, e.clientY);
+        }
+    );
+}
+
+function showLoading1() {
+    for (i = 0; i < lol.length; i++) {
+        lol[i].style.display = 'block';
+    }
+
+    setTimeout(showLoading2, 1000);
+}
+function showLoading2() {
+    for (i = 0; i < lol.length; i++) {
+        lol[i].style.opacity = '1';
+    }
+}
+
+function hideLoading1() {
+    for (i = 0; i < lol.length; i++) {
+        lol[i].style.opacity = '0';
+    }
+    setTimeout(hideLoading2, 1000);
+}
+function hideLoading2() {
+    for (i = 0; i < lol.length; i++) {
+        lol[i].style.display = 'none';
+    }
+}
 
 //window.onresize = reportWindowSize;
 //function reportWindowSize() {
@@ -24,30 +67,40 @@ window.addEventListener("mousemove", (e) => {
 
 // FUNCTIONS |=====================================================
 function changePos(x, y) {
-    console.log('translate(' + x + 'px, ' + y + 'px)');
-    changeList(p0, 1, x, y);
-    changeList(p1, 2, x, y);
-    changeList(p2, 3, x, y);
-    changeList(p3, 4, x, y);
-    changeList(p4, 5, x, y);
+    //console.log('translate(' + x + 'px, ' + y + 'px)');
+    changeList(x, y);
 }
 
-function changeList(loe, pl, x, y) {
-    for (i = 0; i < loe.length; i++) {
+function changeList(x, y) {
+    let wWindow = window.innerWidth,
+        hWindow = window.innerHeight;
 
-        loe[i].style.transform = 'translate(-50%, -50%) translate(' + calcPosX(pl, x) + 'px, ' + calcPosY(pl, y) + 'px)';
+    for (i = 0; i < lop.length; i++) {
+        setTransform(lop[i], x, y, wWindow, hWindow, i);
     }
 }
 
-function calcPosX(pl, x) {
-    x = (x - window.innerWidth / 2);
-    
-    return x/pl;
+function setTransform(element, x, y, wW, hW, i) {
+    element.style.transform =
+        'translate(-50%, -50%) translate('
+        + calcPosX(i, x, wW) + 'px, '
+        + calcPosY(i, y, hW) + 'px)';
+
 }
-function calcPosY(pl, y) {
-    y = (y - window.innerHeight / 2);
-    
-    return y/pl;
+
+function calcPosX(pi, x, wW) {
+    x = (2 * x /wW) - 1;
+    let maxShuffle = (wImg - wW) / 2;
+
+    return (-1 * x / lop.length * (pi + 1) * maxShuffle) / scaleDown;
+    //
+}
+function calcPosY(pi, y, hW) {
+    y = (2 * y / hW  ) -1;
+    let maxShuffle = (wImg/4*3 - hW) / 2;
+
+    return (-1 * y / lop.length * (pi + 1) * maxShuffle) / scaleDown;
+    //
 }
 
 
