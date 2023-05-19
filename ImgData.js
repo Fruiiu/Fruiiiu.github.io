@@ -2204,6 +2204,42 @@ const allImgs = [
         additionals: function () {
             return this.numChar - 1;
         }
+    },
+    {
+        //google access
+        id: "1USAKAKHQKZ1A6mVkNd9TtYCDgcUxN1EZ",
+
+        //gallery settings
+        name: "Frozen Wastes",
+        descrip: "",
+        bg: "None",
+        ratio: "4/3",
+
+        //commision settings
+        numChar: 0,
+        finish: 4, //[0, 4]
+        size: 0,  //[1,3]
+        additionals: function () {
+            return this.numChar - 1;
+        }
+    },
+    {
+        //google access
+        id: "1Kd_OmT5nCuioX-5L0oWAOasLelLCTyi1",
+
+        //gallery settings
+        name: "Parallax Background",
+        descrip: "The background for the webstie home page, spent three hours on custom plant brushes. Color added with gradient map. ",
+        bg: "None",
+        ratio: "4/3",
+
+        //commision settings
+        numChar: 0,
+        finish: 4, //[0, 4]
+        size: 0,  //[1,3]
+        additionals: function () {
+            return this.numChar - 1;
+        }
     }
 
 
@@ -2389,14 +2425,14 @@ const imgSets = [
 const portfolio = [
     'i92', 's9', 'i26', 'i27', 'i20', 'i90',
     'i86', 's13', 'i81', 'i112','s15', 's8',
-     'i33',  'i105', 'i85', 'i84',  'i107',
+    'i33', 'i105', 'i116',  'i85', 'i84',  'i107',
      's11','s12','i89', 'i52', 'i106', 'i91',
-    'i108',  'i115', 's4', 'i36',
+    'i108',  'i115', 's4','i117', 'i36',
     'i37', 'i34', 's10', 's14'
 ]
 const backgrounds = [
      'i20','i26','i27','i105', 'i85', 'i108', 's4',
-     'i91',  's11','i106', 'i115', 's10' 
+     'i91', 'i116', 'i117',  's11','i106', 'i115', 's10' 
 ]
 
 

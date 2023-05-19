@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="ImgViewStyleSheet.css" />
+    <link rel="stylesheet" href="GalleryStyleSheet.css" />
+    <link rel="icon" type="image/x-icon" href="main/UhWat.png" />
+
+
+</head>
+<body>
+    <div class="hehe"></div>
+
+    <div class="modal">
+        <div class="close" onclick="closeModal()">
+            <p>&times</p>
+        </div>
+        <div class="expcont" id="mcont">
+        </div>
+    </div>
+
+
+    <!--header-->
+    <div>
+        <h2>Controls</h2>
+        <p>number of images : <span id="totals"></span></p>
+        <h3> other pages </h3>
+        <a href="index.html">
+            home
+        </a>
+        <a href="example.html">
+            hm?
+        </a>
+        <h3> image showing </h3>
+        <button onclick="setGalleryAllImgs()">
+            all images
+        </button>
+        <button onclick="setGalleryAllSets()">
+            all sets
+        </button>
+        <button onclick="setGallerySomeImgs(getInputA(), getInputB())">
+            some imgs (put in field)
+        </button>
+        <button onclick="setGallery(readListString(getOrganised()))">
+            images and sets
+        </button>
+        <button onclick="setGallery(readListString(portfolio))">
+            portfolio
+        </button>
+        <button onclick="setGallery(readListString(backgrounds))">
+            backgrounds
+        </button>
+        <button onclick="setGallery(readListString(charDes))">
+            designs
+        </button>
+        <button onclick="setGallery(readListString(commExamples))">
+            commision examples
+        </button>
+        <div>
+
+            <input type="text" id="inputA" />
+            <input type="text" id="inputB" />
+        </div>
+    </div>
+
+
+    <div class="gallery" id="gallery">
+        <!--leave this in for js to find-->
+    </div>
+
+    <!--all da scripts here-->
+    <script src="ImgData.js"></script>
+    <script src="ImgDisplay.js"></script>
+    <script>
+        changeHeight(250);
+        changeInGallery(true);
+    </script>
+    <script>
+        document.getElementById('totals').innerHTML = String(allImgs.length);
+
+        function getInputA() {
+            a = Number(document.getElementById("inputA").value)
+            //console.log(a);
+            return a;
+        }
+        function getInputB() {
+            a = Number(document.getElementById("inputB").value)
+            //console.log(a);
+            return a;
+        }
+        //function () {
+        //    document.getElementById("rah").innerHTML = document.getElementById("myText").value;
+        //}
+    </script>
+
+</body>
+</html>
