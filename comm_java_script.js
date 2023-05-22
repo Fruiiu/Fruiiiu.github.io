@@ -43,10 +43,10 @@ function onSizeChange(i) {
 }
 
 function onElementChange(i) {
-    onExampleChange();
     //helper for changing the additional elements number, reapplying mask
     displayAE(i);
     styleAllMasks(slider.value);
+    onExampleChange();
 }
 
 //every input of example change
@@ -60,6 +60,7 @@ function onExampleChange() {
                 Number(num_elements.innerHTML))
         )
     );
+    setPrice();
 }
 
 //==========| other functions |===================================================================
@@ -229,5 +230,91 @@ function getAdditionalsPaths() {
 function getNumAdditionals() {
     //get the number of additionals displayed
     return Number(num_elements.innerHTML);
+
+}
+
+
+//PRICE CALCULATION AND DESCRIPTIONS |===========================
+function setPrice() {
+    document.getElementById('price').innerHTML = getPrice();
+}
+
+function getPrice() {
+    /* gets the price range between two hourly rates */
+    let base1 = 15.50,
+        base2 = 20;
+    return priceRound(calcPrice(base1)).toFixed(2)
+        + "~"
+        + priceRound(calcPrice(base2)).toFixed(2)
+        + " CAD";
+}
+
+function calcPrice(base) {
+
+    /*
+    estimates the price for hourly pay (base) and the specified characteristics
+     */
+    let fin = Number(slider.value),
+        additionals = Number(num_elements.innerHTML);
+
+    let hrs = 0;
+    //the hours for each of these steps
+    let bg = 1,
+        sketch = 3,
+        line = 1,
+        color = 1,
+        shade = 1,
+        ads = 0.75; 
+
+    switch (fin){
+        case 0:
+            hrs = sketch;
+            break;
+        case 1:
+            hrs = sketch + line;
+            break;
+        case 2:
+            hrs = sketch + line + color;
+            break;
+        case 3:
+            hrs = sketch + line + color + shade;
+            break;
+        case 4:
+            hrs = sketch + line + color + shade;
+            bg = 2;
+            break;
+    }
+
+    //without additionals
+    let price = hrs * bg / (4 - size) * base;
+    price *= 1 + ads * additionals;
+    console.log(additionals);
+    return price;
+}
+
+function priceRound(f) {
+    let deci = f % 1;
+
+    if (priceCloser(deci, 0, 0.5)) {
+        deci = 0;
+    }
+    else if (priceCloser(deci, 0.5, 1)) {
+        deci = 0.5;
+    }
+    else {
+        deci = 1;
+    }
+
+    return Math.floor(f) + deci;
+}
+
+function priceCloser(f, a, b) {
+    //returns true if f closer to a than b, flase otherwise
+    if (Math.abs(a - f) > Math.abs(b - f)) {
+        return false;
+    }
+    else {
+        return true;
+    }
 
 }

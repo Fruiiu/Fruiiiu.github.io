@@ -5,23 +5,31 @@
 */
 
 /* -------------------- GENERAL --------------------*/
+html{
+    scroll-behavior:smooth;
+}
 
 body {
     background:url(main/Wallpaper.png);
     background-size:200px;
+    background-attachment:fixed;
+    position:relative;
+    padding:0px;
+    margin:0px;
 }
 
-p, h1, h2, h3, h4, h5, h6,label,img,button {
+p, h1, h2, h3, h4, h5, h6,label,img,button, tr, th, li {
     margin:7px;
     color: white;
 }
 
+
+
 a {
     color: #A9F4FF;
 }
-
     a:visited {
-        color: #7CA9FF;
+        color: rgb(0, 162, 212);
     }
 
 .flex {
@@ -54,6 +62,19 @@ a {
     z-index: 3;
 }
 
+/*decoration*/
+li{
+    list-style:none;
+}
+    li::before {
+        display: inline-block;
+        height: 9px;
+        width: 15px;
+        content: '';
+        background-image: url(main/UlLi.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
 
 .shaded {
     width:inherit;
@@ -61,7 +82,6 @@ a {
     margin-top:10px;
     margin-bottom:10px;
 }
-
     .shaded > div {
         padding-top: 5px;
         padding-left: 10px;
@@ -86,6 +106,10 @@ a {
     transform: scale(1.1);
 }
 
+.framebl,.framebr,.frametl,.frametr{
+    pointer-events:none;
+}
+
 .frametl {
     transform: scale(0.3);
     top: -69px;
@@ -107,11 +131,27 @@ a {
     right: -88px;
 }
 
-
-.tos{
+div.deco {
+    position:relative;
+    padding-left: 33px;
+    padding-bottom: 30px;
+}
+div.deco>img {
+    position:absolute;
+    bottom:0px;
+    left:0px;
+    height:50px;
+    z-index:-1;
 }
 
-.tos > *{
+.txt{
+    margin-left:70px;
+    margin-right:70px;
+    margin-top:30px;
+    margin-bottom:30px;
+}
+
+.txt > table{
     
     text-align:center;
 }
@@ -331,7 +371,7 @@ input[type=range][orient=vertical] {
         transform: translate(0px);
     }
 
-/*#top {
+#top {
     width: 150px;
     transform: translate(-60px);
 }
@@ -339,4 +379,122 @@ input[type=range][orient=vertical] {
     #top:hover {
         transform: translate(0px);
     }
-*/
+
+/*tos stuff*/
+p.aster{
+    font-size:10px;
+}
+p.aster::before{
+    content:"*";
+}
+
+/*toc stuff*/
+div.toc{
+   text-align:center; 
+   filter:drop-shadow(0px 0px 3px black);
+}
+ul.toc{
+    list-style-type:none;
+    padding:0px;
+    font-size:18px;
+}
+ul.toc li::before
+{
+    width:0px;
+}
+ul.toc li>:first-child{
+}
+    ul.toc li > :first-child::before, ul.toc li > :first-child::after {
+        content: '';
+        display: inline-block;
+        background-image: url(main/Ll.png);
+        background-size:contain;
+        background-repeat:no-repeat;
+        height: 23px;
+        width: 15px;
+        vertical-align: middle;
+    }
+        ul.toc li > :first-child::after{
+            transform:scale(-1, 1);
+        }
+
+ul.toc>li>ul{
+    font-size:14px;
+}
+ul.toc>li>ul>li>:first-child{
+}
+    ul.toc > li > ul > li > :first-child::before, ul.toc > li > ul > li > :first-child::after {
+        content: '';
+        display: inline-block;
+        background-image: url(main/Lll.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 15px;
+        width: 8px;
+        vertical-align: middle;
+    }
+
+
+
+/*revision table*/
+#trev{
+    margin-left:auto;
+    margin-right:auto;
+    width:90%;
+    min-width:600px;
+}
+    #trev>thead>tr>* {
+        vertical-align:bottom;
+    }
+
+    #trev>tbody>tr>:nth-child(1) {
+        width:12%;
+    }
+    #trev > tbody > tr > :nth-child(2) {
+        text-align: center;
+        width: 10%;
+    }
+    #trev > tbody > tr > :nth-child(3) {
+        width: 67%;
+    }
+    #trev > tbody > tr > :nth-child(4) {
+        text-align: center;
+        width: 10%;
+    }
+        #trev > tbody > tr > :nth-child(4)::before {
+        content:">$";
+        }
+
+/*do dont table*/
+#dnd+table{
+    margin-left:auto;
+    margin-right:auto;
+    width:60%;
+
+}
+#dnd + table > thead>tr>*{
+    width: 50%;
+}
+#dnd + table > tbody>tr>*{
+    vertical-align:top;
+}
+    #dnd + table > tbody > tr > td > ul {
+        padding:0px;
+    }
+
+/*curtains*/
+.curtain{
+    position:absolute;
+    top:-32px;
+    z-index:-3;
+    padding:0px;
+    margin:0px;
+    height:670px;
+}
+.curtain.l{
+    left:0px;
+}
+.curtain.r{
+    right:0px;
+    transform:scale(-1, 1);
+}
