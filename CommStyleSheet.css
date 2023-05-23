@@ -9,6 +9,17 @@ html{
     scroll-behavior:smooth;
 }
 
+.noone {
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+}
+main {
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+}
+
 body {
     background:url(main/Wallpaper.png);
     background-size:200px;
@@ -16,6 +27,26 @@ body {
     position:relative;
     padding:0px;
     margin:0px;
+}
+
+footer {
+    position: absolute;
+    height: 300px;
+    bottom: -130px;
+    width: 100%;
+    text-align:center;
+}
+    footer div {
+        position:relative;
+        width: inherit;
+        height: inherit;
+        background: linear-gradient(0deg, #703757, white);
+        mix-blend-mode: multiply;
+        z-index:-4;
+    }
+footer p{
+    margin-top:-25px;
+    font-size:11px;
 }
 
 p, h1, h2, h3, h4, h5, h6,label,img,button, tr, th, li {
