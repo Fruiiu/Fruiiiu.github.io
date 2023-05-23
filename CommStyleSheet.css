@@ -23,6 +23,11 @@ p, h1, h2, h3, h4, h5, h6,label,img,button, tr, th, li {
     color: white;
 }
 
+p{
+}
+tr{
+    height:30px;
+}
 
 
 a {
@@ -138,7 +143,7 @@ div.deco {
 }
 div.deco>img {
     position:absolute;
-    bottom:0px;
+    bottom:-10px;
     left:0px;
     height:50px;
     z-index:-1;
@@ -173,7 +178,7 @@ div.deco3 {
     margin-left:140px;
     margin-right:140px;
     margin-top:30px;
-    margin-bottom:30px;
+    margin-bottom:0px;
 }
 
 .txt > table{
@@ -421,9 +426,13 @@ input[type=range][orient=vertical] {
 
 /*tos stuff*/
 p.aster{
-    font-size:10px;
+    font-size:14px;
+    font-weight:bold;
 }
 p.aster::before{
+    content:"*";
+}
+p.aster::after{
     content:"*";
 }
 
@@ -488,15 +497,26 @@ ul.toc>li>ul>li>:first-child{
 #trev{
     margin-left:auto;
     margin-right:auto;
-    width:90%;
+    margin-bottom:15px;
+    width:60%;
     min-width:600px;
+    border-collapse:collapse;
 }
-    #trev>thead>tr>* {
-        vertical-align:bottom;
+    #trev > thead > tr > * {
+        vertical-align: bottom;
+        padding-bottom: 10px;
+        border-bottom: solid 1px white;
+    }
+    #trev > thead > tr > :nth-child(1) {
+        padding-right: 10px;
+        border-right: solid 1px white;
     }
 
     #trev>tbody>tr>:nth-child(1) {
         width:12%;
+        text-align:right;
+        padding-right:10px;
+        border-right:solid 1px white;
     }
     #trev > tbody > tr > :nth-child(2) {
         text-align: center;
