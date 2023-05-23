@@ -13,6 +13,18 @@
 </head>
 
 <body>
+    <div
+         style=" 
+    background: linear-gradient(180deg, #703757, white); 
+    mix-blend-mode: multiply; 
+    position: absolute; 
+    height: 300px; 
+    width: 100%; 
+    top: -32px; 
+    z-index: -4; "
+         >
+        <!-- linear gradient -->
+    </div>
     <img class="curtain l" src="https://drive.google.com/uc?id=1qXLQ9N_J5WzpBU4V3igEmH5WyStJi7iw"/>
     <img class="curtain r" src="https://drive.google.com/uc?id=1qXLQ9N_J5WzpBU4V3igEmH5WyStJi7iw"/>
 
@@ -24,7 +36,7 @@
         <a href="index.html" class="menuItem" id="home">
             <img src="input/Home.png" alt="Home" />
         </a>
-        <a href="#headerr" class="menuItem" id="top">
+        <a href="#toc" class="menuItem" id="top">
             <img src="input/Top.png" alt="Top" />
         </a>
     </div>
@@ -39,8 +51,8 @@
     </div>
 
     <!-- table of contents -->
-    <div class="txt toc" >
-        <h1>Table of Contents</h1>
+    <div class="txt toc" id="toc">
+        <h1 class="framed1">Table of Contents</h1>
         <ul class="toc">
             <li><a href="#dnd"> Dos and Donts</a></li>
 
@@ -63,7 +75,11 @@
 
     <!-- Dos and Donts -->
     <div class="txt">
-        <h1 id="dnd" >Dos and Don'ts</h1>
+        <div class="deco2">
+            <h1 id="dnd">Dos and Don'ts</h1>
+            <img src="main/Frame2.png"/>
+        </div>
+        
         <div class="flex center">
             <div class="shaded" style="min-width:300px;width:300px;margin:20px;">
                 <img class="framebg"
@@ -142,15 +158,20 @@
 
 
     <!--terms of service-->
-    <div class="txt" >
+    <div class="txt">
         <!-- title -->
-        <div>
+        <div class="deco2">
             <h1 id="tos">Terms of Service</h1>
+            <img src="main/Frame2.png" />
         </div>
 
         <!-- Payment -->
         <div>
-            <h2 id="pmt">Payment</h2>
+            <div class="deco3">
+                <img src="main/Frame3.png" />
+                <h2 id="pmt">Payment</h2>
+            </div>
+            
             <ul>
                 <li>
                     Payment will be done through artistree request forms, and artistree/stripe invoices.
@@ -172,8 +193,12 @@
 
         <!-- Process & Revisions -->
         <div>
-            <h2 id="pne">Process & Revisions</h2>
-            
+            <div class="deco3">
+                <img src="main/Frame3.png" />
+                <h2 id="pne">Process & Revisions</h2>
+            </div>
+           
+
             <ul>
                 <li>
                     I may decline your commission request.
@@ -191,10 +216,10 @@
                 <table id="trev">
                     <thead>
                         <tr>
-                            <th > </th>
-                            <th > # of Free Changes</th>
-                            <th > What to Change</th>
-                            <th > Additional Changes</th>
+                            <th> </th>
+                            <th> # of Free Changes</th>
+                            <th> What to Change</th>
+                            <th> Additional Changes</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -228,20 +253,24 @@
                             <td>10</td>
                         </tr>
                     </tbody>
-                    
+
                 </table>
 
                 <p class="aster" style="text-align:center;"> The price for additional changes will need to be paid before you receive the final product.  </p>
 
             </div>
-            
+
         </div>
 
         <!-- Product & Rights -->
         <div>
-            <h2 id="pni">Product & Rights</h2>
+            <div class="deco3">
+                <img src="main/Frame3.png" />
+                <h2 id="pni">Product & Rights</h2>
+            </div>
+            
             <ul>
-                
+
                 <li>
                     You are receiving a one time product, which is a piece of digital artwork (I do not provide physical copies).
                 </li>
@@ -260,7 +289,11 @@
     
     <!--commision interactible-->
     <div class="txt">
-        <h1 id="csi">Commission Interactable</h1>
+        <div class="deco2">
+            <h1 id="csi">Commission Interactable</h1>
+            <img src="main/Frame2.png" />
+        </div>
+        
     </div>
     
     <div class="flex">

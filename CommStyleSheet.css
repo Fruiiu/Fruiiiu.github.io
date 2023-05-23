@@ -143,10 +143,35 @@ div.deco>img {
     height:50px;
     z-index:-1;
 }
+div.deco2 {
+    position:relative;
+    padding-left: 34px;
+    padding-bottom: 17px;
+}
+div.deco2>img {
+    position:absolute;
+    bottom:0px;
+    left:0px;
+    height:46px;
+    z-index:-1;
+}
+div.deco3 {
+    position: relative;
+    padding-left: 19px;
+    padding-bottom: 7px;
+}
+
+    div.deco3 > img {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        height: 32px;
+        z-index: -1;
+    }
 
 .txt{
-    margin-left:70px;
-    margin-right:70px;
+    margin-left:140px;
+    margin-right:140px;
     margin-top:30px;
     margin-bottom:30px;
 }
@@ -156,6 +181,20 @@ div.deco>img {
     text-align:center;
 }
 
+.framed1::before, .framed1::after {
+    content: '';
+    display: inline-block;
+    background: url(main/UnderlineL.png);
+    height: 39px;
+    width: 167px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    margin:7px;
+}
+.framed1::before{
+    transform:scale(-1, 1);
+}
 /*--------------------IMAGE STACK--------------------*/
 .stackcontainer {
     min-width: 420px;
@@ -397,6 +436,7 @@ ul.toc{
     list-style-type:none;
     padding:0px;
     font-size:18px;
+    margin:7px;
 }
 ul.toc li::before
 {
@@ -434,6 +474,14 @@ ul.toc>li>ul>li>:first-child{
         vertical-align: middle;
     }
 
+.toc li>a{
+    text-decoration:none;
+    color:white;
+}
+.toc li>a:visited{
+    text-decoration:none;
+    color:antiquewhite;
+}
 
 
 /*revision table*/
