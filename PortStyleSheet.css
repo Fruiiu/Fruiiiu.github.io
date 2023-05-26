@@ -18,7 +18,8 @@ body {
     position: relative;
     margin: 0px;
     height: 100%;
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x:hidden;
     background-image: url("https://64.media.tumblr.com/6430bb807cb0de1a5f199980eaa57006/c8677ef4f736105b-7c/s1280x1920/256c805a932a4b392133eaddad5e5d9517a65f3b.pnj");
     background-size: cover;
     background-attachment: fixed;

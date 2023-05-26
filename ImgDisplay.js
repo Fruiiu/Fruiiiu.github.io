@@ -24,10 +24,10 @@ function changeInGallery(b) {
 
 function setScroll() {
     if (modalOpen == true) {
-        document.body.style.overflow = 'hidden';
+        document.body.style.overflowY = 'hidden';
     }
     else {
-        document.body.style.overflow = 'scroll';
+        document.body.style.overflowY = 'scroll';
     }
 }
 
@@ -57,15 +57,15 @@ function getGooglePath(id) {
 
 
 //inner display (for modals and inside of thumbnails)
-function getSetDiv(si) {
+function getSetDiv(si) { 
     let i = getSet(si).tnIndex;
     //for set thumbnails, do not use inside modal
     return '<div class="test" ' + getDivStyle(getDivAspect(i)) + ' > ' + getSetElement(si) + ' </div>';
 }
 
-function getImgDiv(i) {
+function getImgDiv(i, formodal) { //TODO test
     //this is needed for lazy loading I think
-    return '<div class="test" ' + getDivStyle(getDivAspect(i)) + ' > ' + getImgElement(i) + ' </div>';
+    return '<div class="test" ' + getDivStyle(getDivAspect(i)) + ' > ' + getImgElement(i, formodal) + ' </div>';
 }
 
 function getDivStyle(s) {
@@ -80,34 +80,62 @@ function getDivAspect(i) {
 
 }
 
-function getImgElement(i) {
+function getImgElement(i, formodal) { //TODO test
     //gets the image element using index of 
     var img = getImg(i);
 
-    return '<img'
-        + getImgID(i)
-        + getTitleImg(i)
-        + getClass(img)
-        + getSRC(img)
-        + getAlt(img)
-        + getLazyLoad()
-        + ' /> ';
+    //check for srcset attribute
+    if (Object.hasOwn(img, 'srcset') && img.srcset != '') {
+        return '<img'
+            + getImgID(i)
+            + getTitleImg(i)
+            + getClass(img)
+            + getSRCSET(img)
+            + getSize(i, formodal)
+            + getAlt(img)
+            + getLazyLoad()
+            + ' /> ';
+    }
+    else {
+        return '<img'
+            + getImgID(i)
+            + getTitleImg(i)
+            + getClass(img)
+            + getSRC(img)
+            + getAlt(img)
+            + getLazyLoad()
+            + ' /> ';
+    }
+
+   
 
 }
-function getSetElement(si) {
+function getSetElement(si) { //TODO test for errors
     //gets the image element using index of 
     var i = getSet(si).tnIndex;
     var img = getImg(i);
 
-    return '<img'
-        + getSetID(i)
-        + getTitleSet(si)
-        + getClass(img)
-        + getSRC(img)
-        + getAlt(img)
-        + getLazyLoad()
-        + ' /> ';
-
+    if (Object.hasOwn(img, 'srcset') && img.srcset != '') {
+        return '<img'
+            + getSetID(i)
+            + getTitleSet(si)
+            + getClass(img)
+            + getSRCSET(img)
+            + getSize(i, false)
+            + getAlt(img)
+            + getLazyLoad()
+            + ' /> '; 
+    }
+    else {
+        return '<img'
+            + getSetID(i)
+            + getTitleSet(si)
+            + getClass(img)
+            + getSRC(img)
+            + getAlt(img)
+            + getLazyLoad()
+            + ' /> ';
+    }
 }
 
 function getClass(img) {
@@ -151,14 +179,31 @@ function getSetID(si) {
     return ' id = "s' + si + '" ';
 }
 
+
+//TODO new tumblr link functions
+function getSRCSET(img) {
+    return 'srcset="' + img.srcset + '"';
+}
+function getSize(i, formodal) {
+    //the img object and if it's for gallery of modal
+
+
+    if (formodal) {
+        return 'sizes="70vw"';
+    }
+    else {
+        return 'sizes="' + getWidth(i) + 'px"';
+    }
+}
+
 //outer display for thumbnails
 
-function getImgGalleryDiv(i) {
+function getImgGalleryDiv(i) { //TODO test
     //where i is the Set number
     let front = '<div class="imgframe"' + getFrameStyle(i) + getActionImg(i) + '><div class="imgcont">';
     let mid = '</div>';
     let back = '</div>';
-    return front + getImgDiv(i) + mid + back;
+    return front + getImgDiv(i, false) + mid + back;
 }
 function getActionImg(i) {
     return ' onclick="openModalImg(' +i+ ') " ';
@@ -298,6 +343,7 @@ function closeModal() {
 function openModal() {
     for (i = 0; i < modals.length; i++) {
         modals[i].style.display = 'block';
+        modals[i].scrollTo(0, 0);
     }
     modalOpen = true;
     //console.log('modal Opened:' + modalOpen);
@@ -312,6 +358,7 @@ function openModalImg(i) {
     openModal();
     mcont.innerHTML = getModalImage(i);
 }
+
 
 function getModalSet(si) {
     var set = getSet(si);
@@ -337,14 +384,15 @@ function getModalImage(i) {
     let name = '';
     let descrip = '';
 
-    if (getImg(i).name != '') {
+    if (getImg(i).name != '') { 
         name = '<h2>' + getImg(i).name + '</h2>';
     }
     if (getImg(i).descrip != '') {
         descrip = '<p>' + getImg(i).descrip + '</p>';
     }
 
-    return name + getImgDiv(i) + descrip;
+    //TODO get img div - additional parameter add true (is for modal)
+    return name + getImgDiv(i, true) + descrip;
 
 }
 
@@ -572,4 +620,3 @@ function determineRelevance(str, finish, size, additionals) {
     //console.log("relevance:", df + ds + da + nn);
     return df + ds + da + nn;
 }
-
