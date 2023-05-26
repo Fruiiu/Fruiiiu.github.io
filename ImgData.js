@@ -453,7 +453,7 @@ const allImgs = [
         id: "1w4Seks9DE5tDURYkANohDEsgLmtYn63q",
 
         //tumblr stuff 
-        srcset: "",
+        srcset: "https://64.media.tumblr.com/88654199b2bceb0cfe9f0a659e34288d/3ed36568af160091-80/s100x200/b9fa62a8474d01cfd3aa6fa6a8e428448ecaaed8.pnj 100w, https://64.media.tumblr.com/88654199b2bceb0cfe9f0a659e34288d/3ed36568af160091-80/s250x400/bfea7f909eca9a04b8a2716978baaa9c9dce1a80.pnj 250w, https://64.media.tumblr.com/88654199b2bceb0cfe9f0a659e34288d/3ed36568af160091-80/s400x600/fa6f4a3461684b975837e8c87d022dc8163b247e.pnj 400w, https://64.media.tumblr.com/88654199b2bceb0cfe9f0a659e34288d/3ed36568af160091-80/s500x750/07770888af1682c40d93d2b9b96e4302bce67abd.pnj 500w, https://64.media.tumblr.com/88654199b2bceb0cfe9f0a659e34288d/3ed36568af160091-80/s540x810/a192a3cc3a20c5963b8114cdea7eaf6efe26a741.pnj 540w, https://64.media.tumblr.com/88654199b2bceb0cfe9f0a659e34288d/3ed36568af160091-80/s640x960/d59d90b9d77dc72b87bb77fa6383e3dce88fe832.pnj 640w, https://64.media.tumblr.com/88654199b2bceb0cfe9f0a659e34288d/3ed36568af160091-80/s1280x1920/1b08e74c9a6dbff45ec6d7b1fb4f33239e813603.pnj 1280w, https://64.media.tumblr.com/88654199b2bceb0cfe9f0a659e34288d/3ed36568af160091-80/s2048x3072/2c9de81698cba415315f05dfa6de6671956a25b3.pnj 1427w",
 
         //gallery settings
         name: "Arctic Wolf",
