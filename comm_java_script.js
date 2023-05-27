@@ -11,6 +11,10 @@ for (i =1; i < 10; i++) {
 }
 
 let size = 1; //for size
+
+let smol = Number(window.innerWidth) <= 536;
+
+
 //number(slider.value) for finish
 //number(num_elements.innerhtml) dor size
 
@@ -21,11 +25,15 @@ window.onload = function () {
 
     switchChar(slider.value);
     setMask(getMaskPath(1));
-
     styleAllMasks(slider.value);
     onExampleChange();
-
+    switchSize();
 };
+
+//on resize
+window.onresize = function () {
+    sizeControl();
+}
 
 //on inputs
 slider.oninput = function () {
@@ -64,6 +72,30 @@ function onExampleChange() {
 }
 
 //==========| other functions |===================================================================
+function sizeControl() {
+    //make sure imgdisplay js is linked before this.
+    if ((Number(window.innerWidth) <= 536) == smol) {
+        console.log("same");
+    }
+    else {
+        console.log('dif and change');
+        smol = !smol;
+        switchSize();
+    }
+}
+function switchSize() {
+    console.log('ss called');
+    if (smol) {
+        console.log('small');
+        changeHeight(120);
+        onExampleChange();
+    }
+    else {
+        console.log("large");
+        changeHeight(200);
+        onExampleChange();
+    }
+}
 
 function switchChar(a) {
     i = Number(a);

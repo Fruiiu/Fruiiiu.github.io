@@ -189,7 +189,13 @@ function getSize(i, formodal) {
 
 
     if (formodal) {
-        return 'sizes="70vw"';
+        if (Number(window.innerWidth) >= 720) {
+            return 'sizes="70vw"';
+        }
+        else {
+            return 'sizes="90vw"';
+        }
+        
     }
     else {
         return 'sizes="' + getWidth(i) + 'px"';

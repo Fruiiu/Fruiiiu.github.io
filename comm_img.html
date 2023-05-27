@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <title>Commisions Info</title>
     <!---->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="ImgViewStyleSheet.css" />
     <link rel="stylesheet" href="CommStyleSheet.css" />
     <link rel="icon" type="image/x-icon" href="main/Favicon36.png" />
@@ -50,6 +51,9 @@
                 </div>
             </div>
 
+            <!-- blocker -->
+            <div id="blocker"></div>
+
             <!-- table of contents -->
             <div class="txt toc" id="toc">
                 <h1 class="framed1">Table of Contents</h1>
@@ -81,7 +85,7 @@
                 </div>
 
                 <div class="flex center">
-                    <div class="shaded" style="min-width:300px;width:300px;margin:20px;">
+                    <div class="shaded" style="min-width:300px;width:300px;height:184px;margin:20px;">
                         <img class="framebg"
                              style="height:185px;width:300px;" ;
                              src="main/FrameBg.png" alt="" />
@@ -104,7 +108,7 @@
 
 
                     </div>
-                    <div class="shaded" style="min-width: 300px; width: 300px; margin: 20px; ">
+                    <div class="shaded" style="min-width: 300px; height: 184px; width: 300px; margin: 20px; ">
                         <img class="framebg"
                              style="height: 185px;width:300px;" ;
                              src="main/FrameBg.png" alt="" />
@@ -262,10 +266,10 @@
                 </div>
 
             </div>
-            <div class="flex" style="height:540px;">
+            <div class="flex" id="cic">
 
                 <!--commision display-->
-                <div class="stackcontainer">
+                <div class="stackcontainer" id="ci0">
                     <!--bakground-->
                     <div class="stack">
                         <img id="bg" src="background\SimpleBg.png" alt="simple background" />
@@ -317,7 +321,7 @@
                 </div>
 
                 <!--commision settings-->
-                <div class="top vflex" style="width:182px;">
+                <div class="top vflex" id="ci1">
                     <!--completeness slider-->
                     <div class="shaded">
                         <img class="framebg"
@@ -410,7 +414,7 @@
                 </div>
 
                 <!--commision explanation and examples-->
-                <div class="vflex">
+                <div class="vflex" id="ci2">
                     <div class="deco">
                         <h2>
                             Price Estimate:  <span id="price"> ??? cad </span>
@@ -420,7 +424,7 @@
                     </div>
 
 
-                    <div class="vflex scroll" style="margin-left:15px;margin-right:80px;">
+                    <div class="vflex scroll">
 
                         <div class="gallery" id="gallery" style="width:99%;">
                             Nothing has been loaded yet
@@ -465,8 +469,6 @@
     <script src="ImgDisplay.js"></script>
     <script>
         changeInGallery(false);
-        changeHeight(200);
-        setGallerySomeImgs(1, 3);
         document.getElementById("portrait").checked = true;
     </script>
     <script src="comm_java_script.js"></script>

@@ -138,3 +138,11 @@ div.test{
 .imgcont:hover ~ .stackind{
     opacity:0.8;
 }
+
+/*for diff screen sizes*/
+@media screen and (max-width: 720px) {
+    .expcont{
+        width:90%;
+        margin:auto;
+    }
+}
